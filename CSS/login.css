@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Login-Form{
+    transition: opacity 0.6s;
+    width: 50vw;
+    height: 60vh;
+    overflow: hidden;
+    margin: 20vh 25vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100% ;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.Picture-Side{
+    
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.103);
+}
+.Picture-Side p{
+    flex: 1;
+    font-size:3rem;
+    text-align: center;
+    margin-top: 2rem    ;
+    font-weight: 600;
+    cursor: default;
+    
+}
+.Picture-Side img{
+    flex: 4;
+    width: 100%;
+    height: 100%;
+}
+.Input-Side{
+    background-color: rgba(0, 0, 0, 0.048);
+    display: grid ;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 20% 20% 12% 7% 13% 8%;
+}
+#Title{ 
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 1.5rem;
+    font-weight:600 ;
+    cursor: default;
+    color: #3f37c9;
+    position: relative;
+}
+#Cancel-Button{
+    position: absolute;
+    top :0 ;
+    right: 0;
+    width: 3rem;
+    font-size: 2rem;
+    color: #000000;
+    transition: 0.2s;
+}
+#Cancel-Button:hover{
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.ID{
+    height: 100%;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    cursor: default;
+}
+.Input{
+    width: 85%;
+    height: 2.5rem;
+    border-radius: 5px 5px 0 0 ;
+    padding-left: 2.4rem;
+    font-size: 1.3rem;
+    color: #571089;
+    cursor: text;
+    border:none;
+    border-bottom: 1px solid gray;
+}
+.Input:focus{
+    outline: none;
+    border-bottom: 2px solid blue;
+}
+.Password{
+    height: 100%;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    cursor: default;
+}
+
+.material-icons{
+    position: absolute;
+    padding: 8px;
+    color: #571089;
+}
+.Forget-Password{
+    margin-left: 2.2rem;
+    margin-right: 1.8rem;
+}
+.Forget-Password a{
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1.2rem;
+    color: #3f37c9;
+}
+.submit{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    height: 100%;
+}
+#Submit{
+    width:100%;
+    height: 85%;
+    margin-top: 6px;
+    background-color:#806788;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    color: #ffffff;
+    cursor: pointer;
+}
+#Submit:hover{
+    background-color: rgba(87, 16, 137, 0.548)
+}
+.Login-Form {
+    animation: fadeInAnimation ease 1s;
+}
+.Login-Form{
+    animation: fadeOutAnimation ease 0.6s;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 100;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+#View-Password{
+    margin-left: 2rem;
+    width: 81%;
+    height:75%;
+    margin-top: 0.25rem;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.2rem;
+    padding-right: 4rem;
+}
+#View-Password::before{
+    position: absolute;
+    font-family: Material Icons Round;
+    margin-right: 3px;
+    position: absolute;
+    top: 51%;
+    left: 2.5%;
+    font-size: 1.5rem;
+    transform: translateY(-50%);
+    color: #571089;
+}
+.Visible::before{
+    content: "visibility";
+}
+.Hidden::before{
+    content: "visibility_off";
+}

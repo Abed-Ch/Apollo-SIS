@@ -1,0 +1,771 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    scrollbar-color: #571089 rgb(223, 222, 222);
+    font-family: 'Roboto', sans-serif;
+}
+
+* textarea:focus {
+    outline: none;
+    border: 1px solid blue;
+    padding-left: 0.5rem;
+}
+
+* input:focus {
+    outline: none;
+    border: 1px solid blue;
+    padding-left: 0.5rem;
+}
+
+body {
+    padding: 0 10vw;
+    width: 80vw;
+    height: 100vh;
+    position: relative;
+    background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 1400 1500' width='1400' height='1500' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Cdefs%3E%3Cfilter id='blur1' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='305' result='effect1_foregroundBlur'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='1400' height='1500' fill='%23c0f7f5'/%3E%3Cg filter='url(%23blur1)'%3E%3Ccircle cx='85' cy='501' fill='%23f5d6ff' r='677'/%3E%3Ccircle cx='762' cy='7' fill='%23c0f7f5' r='677'/%3E%3Ccircle cx='570' cy='581' fill='%23f5d6ff' r='677'/%3E%3Ccircle cx='1102' cy='1443' fill='%23f5d6ff' r='677'/%3E%3Ccircle cx='1351' cy='592' fill='%23c0f7f5' r='677'/%3E%3Ccircle cx='695' cy='1288' fill='%23f5d6ff' r='677'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+}
+
+nav {
+    /* background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 1150 100' width='1150' height='100' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Cdefs%3E%3Cfilter id='blur1' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='56' result='effect1_foregroundBlur'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='1150' height='100' fill='%23c0f7f5'/%3E%3Cg filter='url(%23blur1)'%3E%3Ccircle cx='1139' cy='73' fill='%23f5d6ff' r='125'/%3E%3Ccircle cx='677' cy='6' fill='%23c0f7f5' r='125'/%3E%3Ccircle cx='409' cy='57' fill='%23f5d6ff' r='125'/%3E%3Ccircle cx='164' cy='81' fill='%23f5d6ff' r='125'/%3E%3Ccircle cx='246' cy='30' fill='%23c0f7f5' r='125'/%3E%3Ccircle cx='641' cy='89' fill='%23f5d6ff' r='125'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat; */
+    background-color: rgba(255, 255, 255, 0.63);
+    color: #571089;
+    width: 80vw;
+    position: fixed;
+    top: 0;
+    right: 10vw;
+    height: 5rem;
+    border-radius: 0 0 25px 25px;
+    border: 1px solid rgb(129, 129, 129);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    display: grid;
+    grid-template: 100% / 50% 50%;
+    margin-bottom: 2rem;
+    cursor: default;
+    pointer-events: none;
+}
+
+.Nav-Title-Container {
+    width: calc(100% - 2rem);
+    height: 4rem;
+    padding: 0.5rem 1rem;
+}
+
+.Nav-Buttons-Container {
+
+    width: calc(100% - 2rem);
+    height: 4rem;
+    padding: 0.5rem 1rem;
+}
+
+.Nav-Title-Container>.material-icons-round {
+    height: 4rem;
+    width: 4rem;
+    font-size: 5vw;
+}
+
+.Nav-Title-Container>p {
+    display: inline-block;
+    margin-left: 1.25rem;
+    height: 4rem;
+    font-size: 3.5vw;
+}
+
+.Nav-Buttons-Container>.material-icons-round {
+    height: 4rem;
+    width: 4rem;
+    font-size: 5vw;
+    float: right;
+    cursor: pointer;
+    pointer-events: all;
+    transition: 0.2s;
+}
+
+.Nav-Buttons-Container>.material-icons-round:hover {
+    transform: scale(1.25);
+    color: #7e3aaf;
+}
+
+main {
+    width: calc(80vw - 4rem);
+    height: calc(100% - 8rem);
+    display: grid;
+    margin-top: 6rem;
+    border-radius: 25px;
+    padding: 1rem 2rem;
+    grid-template: 100% / 70% 30%;
+    background-color: rgba(255, 255, 255, 0.63);
+}
+
+.Main-Blogs-Container {
+    padding: 1rem;
+    border-radius: 10px;
+    overflow-y: scroll;
+    scrollbar-color: #571089;
+}
+
+.Blog-Post {
+    width: 100%;
+    height: 15rem;
+    grid-template-columns: 40% 60%;
+    display: grid;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.123), 0 4px 8px 0 rgba(0, 0, 0, 0.185);
+}
+
+.Blog-Picture-Container img {
+    width: 100%;
+    height: 100%;
+}
+
+.Blog-Details-Container {
+    grid-template-rows: 10% 30% 50% 10%;
+    display: grid;
+    width: calc(100%-1rem);
+    height: calc(100%-1rem);
+    padding: 0.5rem;
+}
+
+.Blog-Date {
+    color: rgb(100, 100, 100);
+    font-size: 0.9rem;
+}
+
+.Blog-Title {
+    font-size: 1.85rem;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.Blog-Title:hover {
+    text-decoration: underline;
+}
+
+.Blog-Descreption {
+    padding-top: 0.5rem;
+    color: rgb(100, 100, 100);
+}
+
+.Continue-Reading-Blog {
+    width: 50%;
+    transition: 0.1s;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.Continue-Reading-Blog:hover {
+    background-color: goldenrod;
+}
+
+.Continue-Reading-Blog:hover::after {
+    color: #fff;
+}
+
+.Continue-Reading-Blog::after {
+    content: "Continue Reading";
+    font-size: 1.25rem;
+    color: goldenrod;
+}
+
+.Popular-Blogs-Container {
+    background-color: rgba(255, 255, 255, 0.63);
+    margin-left: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    overflow-y: scroll;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+
+
+}
+
+.PBC-Title {
+    width: 100%;
+    font-size: 2.5vw;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.PBlog {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.123), 0 4px 8px 0 rgba(0, 0, 0, 0.185);
+    height: 7.2rem;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.PBlog-Picture img {
+    width: 100%;
+    height: 100%;
+}
+
+.PBlog-Details {
+    padding: 0.5rem;
+    display: grid;
+    grid-template-rows: 15% 70% 15%;
+}
+
+.PBlog-Title {
+    padding: 0.25rem 0;
+}
+
+.PBlog-Date {
+    font-size: 0.75rem;
+    color: gray;
+}
+
+.PBlog-Rating {
+    font-size: 0.75rem;
+    color: gray;
+}
+
+.See-Blog {
+    display: none;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.See-Blog {
+    animation: Slide_Blog 0.35s forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes Slide_Blog {
+    0% {
+        margin-top: 100vh;
+    }
+
+    50% {
+        margin-top: 50vh;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+.SBlog-Heading {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 25% 5% 70%;
+    padding: 1rem;
+    position: relative;
+}
+
+.SBlog-Heading>.SBlog-Title {
+
+    font-size: 3rem;
+}
+
+.SBlog-Heading>.SBlog-Author-Date {
+
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.SBlog-Author {
+    font-size: 1.25rem;
+    color: rgb(63, 63, 63);
+}
+
+.SBlog-Date {
+    font-size: 1.25rem;
+    color: rgb(63, 63, 63);
+    text-align: end;
+}
+
+.SBlog-MPic img {
+    width: 100%;
+    height: 100%;
+}
+
+.SBlog-MPic {
+    margin-bottom: 1rem;
+}
+
+.SBlog-Par {
+    padding: 1rem;
+    font-size: 1.15rem;
+}
+
+.SBlog-FullPic {
+    padding: 1rem;
+    height: 25rem;
+}
+
+.SBlog-FullPic img {
+    width: 100%;
+    height: 100%;
+}
+
+.SBlog-HalfPic {
+    padding: 1rem;
+    height: 20rem;
+}
+
+.SBlog-HalfPic img {
+    width: 50%;
+    height: 100%;
+}
+
+.SBlog-Header {
+    padding: 0.5rem 1.25rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.SBlog-NL {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+.SBlog-NL li {
+
+    list-style-position: inside;
+    margin: 0.5rem;
+}
+
+.SBlog-UL {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+.SBlog-UL li {
+    list-style-position: inside;
+    margin: 0.5rem;
+}
+
+#Exit-See-Blog {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 0;
+    font-size: 3rem;
+    text-align: center;
+    right: 0;
+    cursor: pointer;
+    color: #571089;
+}
+
+#Exit-See-Blog::after {
+    content: "highlight_off";
+    transition: all 1s;
+}
+
+#Exit-See-Blog:hover::after {
+    content: "cancel";
+}
+
+.See-Blog-Rating {
+    height: 8rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    gap: 0.1rem;
+    background-color: rgb(212, 211, 211);
+    border-radius: 25px;
+}
+
+.Rating-Face {
+    padding: 0.5rem;
+}
+
+.Rating-Face>.material-icons-round {
+    width: 100%;
+    height: 100%;
+    font-size: 7rem;
+    text-align: center;
+    cursor: default;
+    color: rgb(209, 159, 22);
+}
+
+.Rating-Stars {
+    padding: 1.89rem 7.7835px;
+}
+
+.Rating-Stars li {
+    display: block;
+    float: left;
+    width: 4rem;
+}
+
+.Rating-Stars .material-icons-round {
+    font-size: 4rem;
+    cursor: pointer;
+    color: rgb(209, 159, 22);
+}
+
+.Rating-Conf-Res {
+    padding: 1rem 2rem;
+}
+
+.Submit-Rating {
+    width: 100%;
+    height: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#Reset {
+    width: 100%;
+    cursor: pointer;
+    height: 50%;
+    font-size: 1.1rem;
+}
+
+.New-Blog-Input-Cont {
+    width: calc(100% - 1rem);
+    height: 100%;
+    padding: 1rem;
+    overflow-y: scroll;
+    display: none;
+    animation: Slide_Blog 0.35s forwards;
+    animation-iteration-count: 1;
+}
+
+.New-Blog-Controll {
+    margin-left: 1rem;
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    padding: 1rem;
+    grid-template-rows: 10% 90%;
+    display: none;
+    animation: Slide_Blog 0.35s forwards;
+    animation-iteration-count: 1;
+}
+
+.Controll-Options-Child {
+    flex: 1;
+    font-size: 1.5rem;
+    text-align: left;
+    height: 2.25rem;
+    background-color: rgb(211, 211, 211);
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.Controll-Options-Child::after {
+    font-family: Material Icons Outlined;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+}
+
+.Controll-Options-Child:nth-child(1)::after {
+    content: "post_add";
+}
+
+.Reviewing::after {
+    content: "visibility";
+}
+
+.NotReviewing::after {
+    content: "visibility_off";
+}
+
+.Controll-Options {
+    display: flex;
+    height: 3rem;
+}
+
+.Insert-Items {
+    width: 94%;
+    height: 85%;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.Insert-Button {
+    flex: 1;
+    font-size: 1.25rem;
+    text-align: left;
+    padding-left: 3.5rem;
+    position: relative;
+}
+
+.Insert-Button::before {
+    font-family: Material Icons Round;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+}
+
+.Insert-Button:nth-child(1)::before {
+    content: "\f1dd";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.Insert-Button:nth-child(3)::before {
+    content: "\f1dc";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.Insert-Button:nth-child(5)::before,
+.Insert-Button:nth-child(7)::before {
+    content: "add_photo_alternate";
+}
+
+.Insert-Button:nth-child(9)::before {
+    content: "format_list_numbered";
+}
+
+.Insert-Button:nth-child(11)::before {
+    content: "format_list_bulleted";
+}
+
+.Empty-Button {
+    flex: 0.2;
+}
+
+.Review-Items {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-rows: 60% 20% 20%;
+    width: 95%;
+    height: 100%;
+}
+
+.Review-Summary {
+    display: flex;
+    flex-direction: column;
+}
+
+.Review-Summary p {
+    flex: 1;
+    font-size: 1.5rem;
+    color: rgb(58, 58, 58);
+}
+
+.Review-Summary p:not(:nth-child(1)) {
+    padding-left: 1rem;
+    font-size: 1.25rem;
+    color: black;
+}
+
+.Review-Buttons {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+}
+
+.Review-Controll {
+    width: 95%;
+    height: 40%;
+    font-size: 1.1rem;
+    text-align: left;
+    padding-left: 1.5rem;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Review-Controll::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+
+}
+
+.Review-Controll:nth-child(1)::after {
+    content: "\f00c";
+}
+
+.Review-Controll:nth-child(2)::after {
+    content: "\e493";
+    font-size: 1.25rem;
+    right: 9%;
+}
+
+.Review-Controll:nth-child(3)::after {
+    right: 19%;
+    content: "\f00d";
+}
+
+.Review-Controll:nth-child(4)::after {
+    content: "\e494";
+    right: 9%;
+    font-size: 1.25rem;
+}
+
+.New-Blog-Heading {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 30% 70%;
+    width: 98%;
+    padding: 1rem;
+}
+
+.New-Blog-Heading>.Inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+#New-Blog-Title {
+    flex: 1;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    padding-left: 1rem;
+    resize: none;
+}
+
+#New-Blog-Author {
+    width: 70%;
+    flex: 0.5;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+}
+
+#New-Blog-Date {
+    width: 40%;
+    flex: 0.5;
+    font-size: 1.25rem;
+    padding-left: 1rem;
+}
+
+#New-Blog-Cover {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.Image {
+    padding-top: 2rem;
+}
+
+.Delete-Btns {
+    display: flex;
+    flex-direction: column;
+}
+
+.NB-DB {
+    flex: 1;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+;
+
+.New-Blog-Div-Parts {
+    padding: 1rem;
+    margin: 1rem 0;
+    margin-bottom: 3rem;
+    height: fit-content;
+}
+
+.NB-Par {
+    height: 18rem;
+    width: 98%;
+    resize: none;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.New-Blog-Body {
+    height: fit-content;
+    position: relative;
+}
+
+.NB-Header {
+    height: 5rem;
+    width: 98%;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.NB-FullPic {
+    height: 25rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.NB-HalfPic {
+    height: 15rem;
+    width: 50%;
+    margin-bottom: 2rem;
+}
+
+.List-Controll-Btns {
+    height: 5rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.List-CTR {
+    flex: 1;
+    margin-right: 1rem;
+    height: 42%;
+    font-size: 1.1rem;
+}
+
+.List-Input {
+    height: 2.5rem;
+    margin-right: 1.5rem;
+    width: 90%;
+    font-size: 1.25rem;
+}
+
+.List ul {
+    margin-left: 1.5rem;
+    list-style-position: inside;
+    font-size: 2rem;
+}
+
+.List ol {
+    margin-left: 1.5rem;
+    list-style-position: inside;
+    font-size: 2rem;
+}
+
+.List li {
+    margin-bottom: 1rem;
+}
+
+.Loading-Screen {
+    background-color: aquamarine;
+    width: 35%;
+    position: absolute;
+    height: 20%;
+    top: 40%;
+    right: 32.5%;
+    display: none;
+    grid-template-columns: 25% 75%;
+    border-radius: 25px;
+    z-index: 1;
+}
+
+.Loading-Screen .fa-3x {
+    padding: 1rem;
+    font-size: 6rem;
+}
+
+.Loading-Message {
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+}

@@ -1,0 +1,154 @@
+*{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+main{
+    width: auto;
+    height: 100vh;
+    display: grid;
+    grid-template : 100% /30% 70% ;
+    transition: margin 0.3s;
+    background-color: #efffff;
+
+}
+.All-Petitions{
+    background-color: #fff;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-rows: 90% 10%;
+    border-right: 1px solid gray;
+}
+.All-Cont{
+    width: 90%;
+    padding: 1rem;
+    height: 90%;
+    overflow-y: scroll;
+}
+#Open-NewP{
+    width: 85%;
+    margin-left: 0.9rem;
+    font-size: 1.2rem;
+    height: 100%;
+    cursor: pointer;
+}
+.Petition{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.123), 0 4px 8px 0 rgba(0, 0, 0, 0.185);
+    height: 7rem;
+    padding: 1rem;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    background-color: #efffff;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+.Petition div{
+    flex:1 ;
+}
+.Petition-Type{
+    border-bottom: 1px solid gray;
+    margin-bottom:0.25rem;
+}
+.Petition-Status{
+    position: relative;
+    padding-left: 2rem;
+    font-size: 1.1rem;
+}
+.Pending::before{
+    content: "pending";
+    color: #fe9705;
+}
+.Accepted::before{
+    content: "check_circle";
+    color: #3ac430;
+}
+.Denied::before{
+    content: "do_not_disturb_on";
+    color: red;
+}
+.Petition-Status::before{
+    font-family:'Material Icons';
+    margin-right: 3px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
+.View-Petitions{
+    width: 80%;
+    padding: 1rem;
+    display: none;
+    grid-template-rows: 10% 90%;
+    height: 100%;
+    margin-left: 4%;
+}
+.View-Petitions > .Title{
+    font-size: 3rem;
+    text-align: center;
+    padding-right: 1.5rem;
+}
+.Body table,tbody{
+    width: 100%;
+    height: fit-content;
+}
+.Body{
+    overflow-y: scroll;
+}
+table td:nth-child(2){
+    padding-left: 1rem;
+}
+.Input-Field{
+    width: 18rem  ;
+    height: 2.5rem;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+    font-size: 1.2rem;
+    border:none;
+    border-bottom: 1.5px solid gray;
+}
+.Input-Field:focus{
+    outline: none;
+    border-bottom: 2px solid blue;
+}
+#NP-Type{
+    width: 18.5rem;
+    height: 2.75rem;
+    margin-top: 0.4rem;
+    padding-left: 0.5rem;
+    font-size: 1.2rem;
+}
+#Petition-Details{
+    width: 92%;
+    height: 5rem;
+    resize: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid gray;
+}
+#Petition-Details:focus{
+    outline: none;
+    border: 2px solid blue;
+}
+.Pet-Btn{
+    width: 90%;
+    height: 3rem;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding-right: 0.5rem;
+}
+#Petition-Justify{
+    width: 92%;
+    height: 5rem;
+    resize: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid gray;
+    margin-bottom: 2rem;
+}
+#Petition-Justify:focus{
+    outline: none;
+    border: 2px solid blue;
+}

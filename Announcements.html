@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+    <link rel="stylesheet" type="text/css" href="CSS/NavBar.css">
+    <link rel="stylesheet" type="text/css" href="CSS/Announcements.css">
+    <link rel="stylesheet" type="text/css" href="CSS/CAlert.css">
+    <title>Announcements</title>
+</head>
+<body>
+    <div class="CAlert-Container hide" id="CAlert-Container" style="width: 25rem; grid-template: 100% / 20% 80%; opacity: 1;z-index: 100;">
+        <div class="Alert-Icon"><span class="material-icons-round" id="Alert-Icon"></span></div>
+        <div class="Alert-Text" id="Alert-Text"></div>
+    </div>
+    <nav class="navbar" id="navbar"  style="display: none;">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="Tmain.html" class="nav-link">
+                <span class="link-text logo-text">Apollo SIS</span>
+                <span class="material-icons" id="logo-icon">double_arrow</span></a>
+            </li>
+            <li class="nav-item"   style="background-color: rgb(196, 196, 196);">
+                <a href="Announcements.html" class="nav-link">
+                    <span class="material-icons">announcement</span>
+                    <span class="link-text" style="margin-left:0.5rem;">Announcements</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Attendance.html" class="nav-link">
+                    <span class="material-icons">person_add</span>
+                    <span class="link-text">Attendance</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Blogs.html" class="nav-link">
+                <span class="material-icons">article</span>
+                <span class="link-text">Blogs</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="Library.html" class="nav-link">
+                <span class="material-icons">auto_stories</span>
+                <span class="link-text">Libary</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Schedule.html" class="nav-link">
+                    <span class="material-icons">event_note</span>
+                    <span class="link-text">Schedule</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Student-Profile.html" class="nav-link">
+                    <span class="material-icons">folder_shared</span>
+                    <span class="link-text">Student Files</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Activities.html" class="nav-link">
+                    <span class="material-icons">assignment</span>
+                    <span class="link-text">Tasks</span>
+                </a>
+            </li>
+            <li class="nav-item" >
+                <a href="#" class="nav-link" id="profile">
+                    <span class="material-icons">account_circle</span>
+                <span class="link-text">Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="Notification-Bar" id="Notification-Bar">
+        <div class="Notifs" id="Notifs"></div>
+        <span id="Clear-All-Notifs">Clear All</span>
+        <span id="Close-Notifs">Close</span>
+    </div>
+    <nav class="navbar" id="navbar2"  style="display: none;">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="Tmain.html" class="nav-link">
+                <span class="link-text logo-text">Apollo SIS</span>
+                <span class="material-icons" id="logo-icon">double_arrow</span></a>
+            </li>
+            <li class="nav-item"   style="background-color: rgb(196, 196, 196);">
+                <a href="Announcements.html" class="nav-link">
+                    <span class="material-icons">announcement</span>
+                    <span class="link-text" style="margin-left:0.5rem;">Announcements</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Blogs.html" class="nav-link">
+                <span class="material-icons">article</span>
+                <span class="link-text">Blogs</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Library.html" class="nav-link">
+                    <span class="material-icons">auto_stories</span>
+                    <span class="link-text">Libary</span>
+                </a>
+            </li>
+            <li class="nav-item" id="Open-Notifs">
+                <a href="#" class="nav-link">
+                    <span class="material-icons">notifications</span>
+                    <span class="link-text">Notifications</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Petitions.html" class="nav-link">
+                    <span class="material-icons">history_edu</span>
+                    <span class="link-text">Petitions</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Schedule.html" class="nav-link">
+                    <span class="material-icons">event_note</span>
+                    <span class="link-text">Schedule</span>
+                </a>
+            </li>
+            <li class="nav-item" id="Activities-Page">
+                <a href="ActivitiesS.html" class="nav-link">
+                    <span class="material-icons">assignment</span>
+                    <span class="link-text">Tasks</span>
+                </a>
+            </li>            
+            <li class="nav-item"  id="profile">
+                <a href="#" class="nav-link">
+                    <span class="material-icons">account_circle</span>
+                <span class="link-text">Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="Main-Header">
+            <div class="Sorting-Section">
+                <select id="Sorting-Select">
+                </select>
+                <span></span>
+            </div>
+            <div class="New-Announcement-Btn">
+                <button id="Add-New-Announcement">Announcements</button>
+            </div>
+        </div>
+        <div class="Announcements"></div>
+        <div class="Read-Announcement" id="Read-Announcement" style="display: none;">
+            <div class="Message-Side">
+                <div class="Close-Section">
+                    <span class="material-icons-round" id="Close-Read">arrow_back_ios</span>
+                </div>
+                <div class="RA-Header">
+                </div>
+                <div class="RA-Body">
+                    <p><input type="text" id="RA-Title" ></p>
+                    <p><textarea id="RA-MSG"></textarea></p>
+                </div>
+                <div class="RA-Booty">
+                </div>
+            </div>
+            <div class="Replies-Side">
+                <div class="Replies-Header">
+                    <span>Replies:</span>
+                    <span></span>
+                </div>
+                <div class="New-Reply">
+                    <span class="material-icons-round" id="Post-Reply">send</span>
+                    <span class="material-icons-round" id="Delete-Reply">cancel</span>
+                    <input type="text" id="My-New-Reply" placeholder="Reply To Announcement">
+                </div>
+                <div class="All-Replies"></div>
+            </div>
+        </div>
+    </main>
+    <div class="New-Announcement" id="New-Announcement-Cont"style="display: none;" >
+        <div class="New-Heading">
+            <select id="New-Announcement-Recievers">
+            </select>
+        </div>
+        <div class="New-Booty"> 
+            <div class="Title"><input type="text" id="New-Msg-Title" placeholder="Announcement Title"></div>
+            <div class="Text"><textarea id="New-Msg-Body" placeholder="Announcement Message"></textarea></div>
+        </div>
+        <div class="New-Control">
+            <button class="New-Announce-Btns">Post</button>
+            <button class="New-Announce-Btns">Cancel</button>
+        </div>
+    </div>
+    <script type="module" src="JavaScript/Nav-Firebase.js"></script>
+    <script type="module" src="JavaScript/Announcements.js"></script>
+    <script>
+        setTimeout(() => {
+            document.getElementById("profile").addEventListener('click' , ()=>{
+            window.open("Profile.html","Profile",'width=750 , height=500')
+            })
+        }, 5000);
+    </script>
+</body>
+</html>

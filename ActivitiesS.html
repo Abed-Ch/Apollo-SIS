@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+    <link rel="stylesheet" type="text/css" href="CSS/NavBar.css">
+    <link rel="stylesheet" type="text/css" href="CSS/ActivitiesS.css">
+    <link rel="stylesheet" type="text/css" href="CSS/CAlert.css">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar2" style="display: none;">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="Tmain.html" class="nav-link">
+                    <span class="link-text logo-text">Apollo SIS</span>
+                    <span class="material-icons" id="logo-icon">double_arrow</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="Announcements.html" class="nav-link">
+                    <span class="material-icons">announcement</span>
+                    <span class="link-text" style="margin-left:0.5rem;">Announcements</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Blogs.html" class="nav-link">
+                    <span class="material-icons">article</span>
+                    <span class="link-text">Blogs</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Library.html" class="nav-link">
+                    <span class="material-icons">auto_stories</span>
+                    <span class="link-text">Libary</span>
+                </a>
+            </li>
+            <li class="nav-item" id="Open-Notifs">
+                <a href="#" class="nav-link">
+                    <span class="material-icons">notifications</span>
+                    <span class="link-text">Notifications</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Petitions.html" class="nav-link">
+                    <span class="material-icons">history_edu</span>
+                    <span class="link-text">Petitions</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Schedule.html" class="nav-link">
+                    <span class="material-icons">event_note</span>
+                    <span class="link-text">Schedule</span>
+                </a>
+            </li>
+            <li class="nav-item" id="Activities-Page" style="background-color: rgb(196, 196, 196);">
+                <a href="ActivitiesS.html" class="nav-link">
+                    <span class="material-icons">assignment</span>
+                    <span class="link-text">Tasks</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" id="profile">
+                    <span class="material-icons">account_circle</span>
+                    <span class="link-text">Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="Notification-Bar" id="Notification-Bar">
+        <div class="Notifs" id="Notifs"></div>
+        <span id="Clear-All-Notifs">Clear All</span>
+        <span id="Close-Notifs">Close</span>
+    </div>
+    <div class="CAlert-Container hide" id="CAlert-Container"
+        style="width: 25rem; grid-template: 100% / 20% 80%; opacity: 1;z-index: 100;">
+        <div class="Alert-Icon"><span class="material-icons-round" id="Alert-Icon"></span></div>
+        <div class="Alert-Text" id="Alert-Text"></div>
+    </div>
+    <main id="main">
+        <div class="Available-Tasks-Container">
+            <div class="Existing-Activities-Container" id="Existing-Activities-Container">
+
+            </div>
+
+        </div>
+        <div class="New-Task-Container" id="New-Task-Container" style="display: none;">
+            <table id="View-Table">
+                <caption style="margin-right: 1.75rem ; font-size: 2.5rem;">View Task</caption>
+                <tbody>
+                    <tr style="height: 4rem;">
+                        <td><input type="text" id="Course-Name" placeholder="Course: "></td>
+                        <td><input type="text" id="Task-Title" placeholder="Task-Title: "></td>
+                    </tr>
+                    <tr>
+                        <td style="height: 8rem;" colspan="2">
+                            <textarea id="Task-Descreption" placeholder="Task Descreption"></textarea>
+                        </td>
+                    </tr>
+                    <tr style="height: 8rem;">
+                        <td>
+                            <p style="font-size: 1.5rem;">Start :</p>
+                            <input type="datetime-local" id="Activity-Start">
+                        </td>
+                        <td>
+                            <p style="font-size: 1.5rem; margin-left: 1rem;">Due :</p>
+                            <input type="datetime-local" id="Activity-Due">
+                        </td>
+                    </tr>
+                    <tr style="height: 6rem;">
+                        <td>
+                            <p style="font-size: 1.5rem;">Task Weight: </p>
+                            <input type="text" id="Task-Weight" class="Task-Input">
+                        </td>
+                        <td>
+                            <p style="font-size: 1.5rem;">Your Score: </p>
+                            <input type="text" id="Task-Grade" class="Task-Input">
+                        </td>
+                    </tr>
+                    <tr style="height: 6rem;">
+                        <td>
+                            <p style="font-size: 1.5rem;">Task Status: </p>
+                            <input type="text" id="Task-Status" class="Task-Input">
+                        </td>
+                        <td>
+                            <p style="font-size: 1.5rem;">Submission Type: </p>
+                            <input type="text" id="Participants-Class" class="Task-Input">
+                        </td>
+                    </tr>
+                    <tr style="height:6rem;">
+                        <td>
+                            <p style="font-size: 1.5rem;">Teacher Attachments:</p>
+                            <button type="button" id="Teacher-Attach">1 File</button>
+                        </td>
+                        <td id="My_Attach-td">
+                            <p style="font-size: 1.5rem;">Your Attachments:</p>
+                            <input type="file" id="My-Attach">
+                        </td>
+                    </tr>
+                    <tr style="height: 5rem;">
+                        <td><button id="Submit-Btn">Submit Task</button></td>
+                    </tr>
+                    <tr style="height: 27rem;">
+                        <td style="height: 100%; width:100%; " colspan="2">
+                            <div class="Comments-Container">
+                                <div class="Comments-Title">
+                                    <span>Direct Messages: </span>
+                                </div>
+                                <div class="Enter-Msg">
+                                    <span class="material-icons-round" id="Cancel-MSG">cancel</span>
+                                    <input type="text" placeholder="Send A Direct Message" id="New-direct-MSG">
+                                    <span class="material-icons-round" id="Send-MSG">send</span>
+                                </div>
+                                <div class="Comments-Container-Inner"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script type="module" src="JavaScript/Nav-Firebase.js"></script>
+    <script type="module" src="JavaScript/ActivitiesS.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+body{
+    
+    position: relative;
+}
+main{
+    padding: 1rem;
+    margin-top: 2rem;
+    display: grid;
+    height: 87%;
+    width: 89%;
+    grid-template-rows: 18% 82%;
+    transition: 0.35s ease;
+    background-color: aliceblue;
+}
+.Main-Header{
+    margin-top: 2rem;
+    width: 100%;
+    height: 3rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+#Sorting-Select{
+    height: 100%;
+    width: 35%;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+}
+#Add-New-Announcement{
+    height: 100%;
+    font-size: 1.25rem;
+    width: 40%;
+    position: relative;
+    margin-left: 60%;
+    text-align: center;
+    padding-left: 1.5rem;
+    cursor: pointer;
+    background-color: rgb(73, 131, 255);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.123), 0 4px 8px 0 rgba(0, 0, 0, 0.185);
+    border: 1px solid rgb(74, 131, 255);
+}
+#Add-New-Announcement::before{
+    font-family: Material Icons Round;
+    content: "add";
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+.Sorting-Section span{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+.Announcements{
+    overflow-y: scroll;
+    border-top: 1px solid black;
+    padding: 1rem 2rem;
+}
+.Announcement{
+    display: grid;
+    grid-template-columns: 10% 70% 20%;
+    padding: 0.5rem;
+    height: 6rem;
+    background-color: #FFF;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+}
+#Select-Announcement{
+    width: 2.5rem;
+    height: 6rem;
+    margin-left: 2rem;
+}
+.Details{
+    padding:0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.Details p:nth-child(1){
+    flex: 0.5;
+    font-size: 1.15rem;
+    cursor: pointer;
+    height: 100%;
+}
+.Details p:nth-child(1):hover{
+    text-decoration: underline;
+}
+.Details p:nth-child(2){
+    flex: 0.5;
+    padding-top: 0.5rem;
+    color: gray;
+}
+.Details p:nth-child(3){
+    flex: 0.5;
+}
+.Options-Icon{
+    text-align: end;
+}
+.Options-Icon .material-icons-round{
+    font-size:2rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.Options-Icon .material-icons-round:hover{
+    background-color: gainsboro;
+}
+.Announcement-Date{
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color:gray;
+    margin-left: 3rem  ;
+}
+.New-Announcement{
+    width: 50%;
+    height: 50%;
+    border-radius: 15px;
+    background-color: #9ce5ce;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    display: none;
+    grid-template-rows: 20% 60% 20%;
+    animation-duration: 0.1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.New-Heading{
+    height: 100%;
+    padding: 1rem;
+}
+.New-Booty{
+    padding: 1rem;
+}
+.New-Booty .Title{
+    margin-bottom: 1rem;
+}
+#New-Msg-Title{
+    width: 97.5%;
+    height: 2rem;
+    font-size: 1.1rem;
+    padding-left: 0.75rem;
+}
+#New-Msg-Body{
+    resize:none;
+    width: 95.5%;
+    height: 6rem;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.75rem;
+    line-height: 1.5rem;
+    word-wrap:break-word;
+    overflow-y: scroll;
+}
+.New-Control{padding: 1rem;}
+.New-Announce-Btns{
+    width: 20%;
+    height: 100%;
+    margin-right: 2rem;
+    font-size: 1rem;
+    padding-right: 1.5rem;
+    position: relative;
+    cursor: pointer;
+}
+.New-Announce-Btns::after{
+    font-family: Material Icons Round;
+    position: absolute;
+    top: 10%;
+    font-size: 1.25rem;
+    right: 22%;
+}
+.New-Announce-Btns:nth-child(1)::after{
+    content: "add_comments";
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+.New-Announce-Btns:nth-child(2)::after{
+    content: "close";
+}
+#New-Announcement-Recievers{
+    width: 40%;
+    height: 60%;
+    padding-left: 0.75rem;
+    font-size: 1rem;
+}
+.Read-Announcement{
+    border-top: 1px solid black;
+    display: grid;
+    grid-template-columns: 55% 45%;
+}
+#Close-Read{
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+#Close-Read:hover{
+    background-color: gainsboro;
+}
+.Message-Side{
+    position: relative;
+    border-right: 1px solid gray;
+    display: grid;
+    grid-template-rows: 8% 15% 72% 5%;
+    padding: 1rem;
+    background-color: #FFF;
+}
+.RA-Header{
+    margin-top: 1rem;
+    font-size: 1.15rem;
+}
+.RA-Header span:nth-child(2){
+    margin-left: 6rem;
+}
+#RA-Title{
+    margin-bottom: 1rem;
+    margin-left: 0.1rem;
+    width: 96%;
+    height: 2rem;
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+    pointer-events: none;
+}
+#RA-MSG{
+    width: 96%;
+    height: 14rem;
+    resize: none;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.5rem;
+    pointer-events: none;
+}
+.RA-Booty p{
+    font-size: 0.9rem;
+    color: #484848;
+}
+.Replies-Side{
+    padding: 1rem;
+    display: grid;
+    background-color: #FFF;
+    grid-template-rows: 10% 20% 70%
+}
+.Replies-Header span:nth-child(1){
+    font-size: 2rem;
+    margin-right: 18rem;
+}
+#My-New-Reply{
+    margin-top: 1.5rem;
+    width: 87%;
+    height: 2rem;
+    font-size: 1.2rem;
+    padding: 0 0.25rem;
+    position: relative;
+    border: none;
+    border-bottom: 2px solid gray;
+}
+#Post-Reply{
+    font-family: Material Icons Round;
+    content: "send";
+    font-size: 2rem;
+    position: absolute;
+    top: 71%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    height: 2.2rem;
+    display: none;
+}
+#My-New-Reply:focus{
+    border-bottom: 2px solid blue;
+    outline: none;
+}
+
+#Post-Reply:hover{
+    background-color: #b8b8b8;
+}
+#Delete-Reply:hover{
+    background-color: #b8b8b8;
+}
+#Delete-Reply{
+    font-family: Material Icons Round;
+    content: "highlight_off";
+    font-size: 1.5rem;
+    position: absolute;
+    top: 71%;
+    left: 1%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+}
+.New-Reply{
+    position: relative;
+    height: fit-content;
+}
+.All-Replies{
+    padding: 1.5rem;
+    background-color: #efffff;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: 1px solid #efffff; 
+
+}
+.Read-Announcement{
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    border: 1px solid black;
+}
+@keyframes Slide_Up{
+    0%{margin-top: 100vh;}
+    50%{margin-top: 50vh;}
+    100%{margin-top: 0vh;}
+}
+@keyframes Slide_Out{
+    0%{margin-top: 0vh;}
+    50%{margin-top: 50vh;}
+    100%{margin-top: 100vh;}
+}
+.Reply{
+    height: fit-content;
+    width: 60%;
+    padding: 1rem;
+    border-radius: 25px;    
+    background-color: #c4c4c4;
+    margin-bottom: 1rem; 
+}
+.My-Reply{
+    background-color: rgb(187, 193, 255) !important;
+    margin-left: 35% !important;
+}
+.Reply-Info{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+}
+.Reply-Info span:nth-child(2){
+    text-align: end;
+    color: #8b8b8b;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    border-bottom: 1px solid black;
+}

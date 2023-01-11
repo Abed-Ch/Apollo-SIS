@@ -1,0 +1,583 @@
+*{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.Editable-Field{
+    pointer-events: all !important;
+    background-color: #fff !important;
+}
+.Uneditable-Field{
+    pointer-events: none !important;
+}
+#main{
+    width: auto;
+    height: 100vh;
+    display: grid;
+    grid-template : 100% /30% 70% ;
+    transition: margin 0.3s;
+}
+.Title-Course{
+    display: grid;
+    grid-template: 100% / 50% 50%;
+}
+.Available-Tasks-Container{
+    padding: 1.5rem;
+    border-right: 1px solid gray;
+    display: grid;
+    grid-template-rows: 88% 12%;
+    grid-template-columns: 100%;
+    position: relative;
+}
+.Existing-Activities-Container{
+    overflow-y: scroll;
+    display: grid;
+    grid-auto-rows: 8rem;
+    gap: 1.75rem;
+    grid-template-columns: 100%;
+}
+.Existing-Activity{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.123), 0 4px 8px 0 rgba(0, 0, 0, 0.185);
+    background-color: aliceblue;
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+    padding: 0.75rem;
+    display: grid;
+    grid-template: 25% 25% 25% 25% / 100% ;
+    cursor: pointer;
+}
+#EA-Title{
+    padding: 6px 0;
+    font-size: 1.25rem;
+}
+#EA-Class{
+    border-top: 1px solid gray;
+    padding: 8px 0;
+}
+#EA-Due{
+    padding: 8px 0;
+}
+#EA-Submissions-Cont{
+    padding: 8px 28px;
+    position: relative;
+}
+.Pending::before{
+    font-family:'Material Icons';
+    margin-right: 3px;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    transform: translateY(-50%);
+    content: "pending";
+    font-size: 1.5rem;
+    color:#fe9705;
+}
+.Missing::before{
+    font-family:'Material Icons';
+    margin-right: 3px;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    transform: translateY(-50%);
+    content: "cancel";
+    font-size: 1.5rem;
+    color:#fe0505;
+}
+.All-Submitted::before{
+    font-family:'Material Icons';
+    margin-right: 3px;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    color: #3ac430;
+    transform: translateY(-50%);
+    content: "check_circle";
+    font-size: 1.5rem;
+}
+.New-Activity{
+    position: absolute;
+    bottom: 1rem;
+    width: 93%;
+    height :3rem;
+
+}
+#New-Activity{
+    width: 92%;
+    height: 3rem;
+    font-size: 1.25rem;
+    padding-right: 1.75rem;
+    margin-left: 1.5rem;
+}
+#New-Activity::after{
+    font-family:'Material Icons';
+    margin-right: 3px;
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    transform: translateY(-50%);
+    content: "add";
+    font-size: 1.5rem;
+}
+.New-Task-Container{overflow-y: scroll; background-color: #efffff;}
+.New-Task-Container table{
+    width: 80%;
+    margin: 0 10%;
+    margin-top: 1rem;
+    table-layout: fixed;
+        
+}
+.New-Task-Container td{
+    height: 100%;
+}
+#Course-Name{
+    width: 85%;
+    height: 65%;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    border: none;
+    background-color: rgba(231, 231, 231, 0.685);
+    border-bottom: 1px solid black;
+    box-shadow: 8px 6px 8px 0px #d4d4d4;
+    border-radius:5px 5px 0 0;
+}
+#Course-Name:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #3070c4;
+}
+#Task-Title{
+    width: 85%;
+    height: 65%;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    border: none;
+    background-color: rgba(231, 231, 231, 0.685);;
+    border-bottom: 1px solid black;
+    box-shadow: 8px 6px 8px 0px #d4d4d4;
+    border-radius:5px 5px 0 0;
+}
+#Task-Title:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #3070c4;
+}
+#Task-Descreption{
+    width: 92.5%;
+    height: 64%;
+    font-size: 1.5rem;
+    resize: none;
+    padding-left: 1rem;
+    border: none;
+    background-color: rgba(231, 231, 231, 0.685);
+    border-bottom: 1px solid black;
+    box-shadow: 8px 6px 8px 0px #d4d4d4;
+    border-radius:5px 5px 0 0;
+}
+#Task-Descreption:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #3070c4;
+}
+#Participants-Class{
+    width: 91%;
+    height: 65%;
+    padding-left: 1rem;
+    font-size: 1.5rem ;
+    border: none;
+    background-color: rgba(231, 231, 231, 0.685);
+    border-bottom: 1px solid black;
+    box-shadow: 8px 6px 8px 0px #d4d4d4;
+    border-radius:5px 5px 0 0;
+}
+#Participants-Class:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #3070c4;
+}
+
+.View-Participants{
+    display: flex;
+    padding-right: 2rem;
+    padding-left: 1rem;
+}
+.View-Participants button{
+    height: 64%;
+    margin-top: 3.5%;
+    width: 18%;
+}
+#NumberParticipants{
+    flex:0.75 ;
+    width: 100%;
+    height: 55%;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+#Submission-Type{
+    width: 91%;
+    height: 65%;
+    padding-left: 1rem;
+    font-size: 1.5rem ;
+    border: none;
+    background-color: rgba(231, 231, 231, 0.685);
+    border-radius:5px 5px 0 0;
+    border-bottom: 1px solid black;
+    box-shadow: 8px 6px 8px 0px #d4d4d4;
+}
+#Submission-Type:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #3070c4;
+}
+.Task-Buttons::before{
+    font-family: 'Material Icons Outlined';
+    position: absolute;
+    top: 52%;
+    margin-left: -10%;
+    font-size: 1.5rem;
+    transform: translateY(-50%);
+}
+.Attach-Container{
+    border: none;
+    position: relative;
+    width: 87%;
+    height: 65%;
+    margin-left:0.5rem ;
+    background-color: rgba(231, 231, 231, 0.685);
+    box-shadow: 8px 6px 8px 0px #d4d4d4;
+    border-bottom: 1px solid black;
+    border-radius:5px 5px 0 0;
+}
+.Attach-Container:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #3070c4;
+}
+#Attach-File{
+    margin-left: 1rem;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    cursor: pointer;
+    opacity: 0;
+    display: block;
+    height: 100%;
+    width: 75%;
+}
+#Activity-Start{
+    height: 30%;
+    width: 85%;
+    font-size: 1.25rem;
+    margin-top: 0.75rem;
+    padding-left: 1rem;
+    box-shadow: 8px 6px 8px 0px #d4d4d4;
+    background-color: rgba(231, 231, 231, 0.685);
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius:5px 5px 0 0;
+}
+#Activity-Start:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #3070c4;
+}
+#Activity-Due{
+    height: 30%;
+    background-color: rgba(231, 231, 231, 0.685);
+    width: 82%;
+    padding-left: 1rem;
+    font-size: 1.25rem;
+    margin-top: 0.75rem;
+    margin-left: 0.5rem;
+    box-shadow: 8px 6px 8px 0px #d4d4d4;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius:5px 5px 0 0;
+}
+#Activity-End:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #3070c4;
+}
+#See-Participants{
+    font-size: 2.25rem;
+}
+#Task-Weight{
+    height: 60%;
+    width: 61%;
+    border: none;
+    margin-left: 1rem;
+    box-shadow: 8px 6px 8px 0px #d4d4d4;
+    background-color: rgba(231, 231, 231, 0.685);
+    border-bottom: 1px solid black;
+    border-radius:5px 5px 0 0;
+    font-size: 1.5rem;
+}
+#Task-Weight:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #3070c4;
+}
+.Task-Buttons{
+    width: 91%;
+    height: 81%;
+    /* font-size: 1.25rem;
+    padding-right: 2.75rem; */
+    font-size: 1.5rem;
+    position: relative;
+
+    border: 0.5px solid gray;
+    border-radius:5px ;
+    cursor: pointer;
+    box-shadow: 8px 6px 8px 0px #d4d4d4;
+    background-color: rgba(163, 163, 163, 0.685);
+}
+.Edit:hover , .Submit:hover{
+    background-color: rgb(54, 209, 49);
+}
+.Delete:hover , .Reset:hover{
+    background-color: rgb(209, 49, 49);
+}
+.Edit::before{
+    content:'edit';
+    font-family: 'Material Icons Outlined';
+}
+.Submit::before{
+    content: 'assignment_turned_in';
+    font-family: Material Icons Outlined;
+}
+.Reset::before{
+    content: 'restart_alt';
+    font-family: Material Icons Outlined;
+}
+.Delete::before{
+    content: 'delete_outline';
+    font-family: Material Icons Outlined;
+}
+.Active{
+    background-color: rgba(114, 116, 116, 0.527);
+}
+.View-Participants-Tab{
+    background-color: #ffffff;
+    width: 40%;
+    left: 30%;
+    top: 10%;
+    position: absolute;
+    height: 80%;
+    border-radius: 15px;
+    padding: 1rem;
+}
+.Close-Button{
+    width: 100%;
+    height: 2rem;
+}
+.Close-Button > .material-icons-round{
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    border-radius: 15px;
+    color:#571089;
+}
+
+.Close-Button >.material-icons-round:hover{
+    background-color: rgba(218, 218, 218, 0.658);
+}
+.View-Participants-Inner{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.Participant{
+    width: 100%;
+    height: 3rem;
+    background-color: #e0e0e0;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    border-radius: 5px;
+}
+.Participant:nth-child(Even){
+    background-color: #9ce5ce;
+}
+
+.Edit-Participants:hover{
+    background-color:rgba(218, 218, 218, 0.658) ;
+}
+
+.Edit-Participants::after{
+    display: block;
+    padding: 0.25rem;
+    font-family: Material Icons Round;
+    content: "edit";
+    font-size: 2.5rem;
+    position: absolute;
+    top: -2px;
+    cursor: pointer;
+    color: #571089;
+}
+.Participant-Name{
+    font-size: 1.5rem;
+    padding: 0.6rem 0.25rem;
+}
+.Edit-View-Participant{
+    width: 94%;
+    height: 87%;
+    display: grid;
+    grid-template-rows: 20% 10% 10% 10% 50%;
+    padding: 1rem;
+    overflow: hidden;
+    background-color: #efffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+}
+.Edit-View-Participant{
+    
+    animation: Edit_View_IN 2s forwards;
+    animation: Edit_View_Out 2s backwards;
+    animation-iteration-count: 1;
+}
+@keyframes Edit_View_IN {
+    0%{
+        margin-right: 100vw;
+    }
+    50%{
+        margin-right: 50vw;
+    }
+    100%{
+        margin-right: 0%;
+    }
+}
+#Student-Attach-Download{
+    width: 50%;
+    height:58%;
+    font-size: 1.1rem;
+    display: none;
+    margin-left: 6.5rem;
+}
+@keyframes Edit_View_Out{
+    0%{
+        margin-right:0 ;
+    }
+    50%{
+        margin-right: 50%;
+    }
+    100%{
+        margin-right: 100%;
+    }
+}
+.Edit-View-Participant > .Student-Details{
+    display: flex;
+    flex-direction: column;
+}
+.Student-Details > p {
+    flex: 1;
+    font-size: 1.5rem;
+}
+.Edit-View-Participant .Student-Status{
+    font-size: 1.5rem;
+}
+.Student-Attachments{
+    font-size: 1.5rem;
+}
+.Comments-Cont-Outer{
+    display: grid;
+    border-radius: 15px;
+    grid-template-rows: 20% 25% 55%;
+    background-color: #fff;
+    border: 0.5px solid gray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.New-Comment input{
+    width: 99%;
+    resize: none;
+    height: 100%;
+    font-size: 1.5rem;
+    border: none;
+    border-bottom: 2px solid gray;
+    padding-left: 0.5rem;
+    background-color: #fff;
+
+}
+.Comments-Cont{
+    overflow-y: scroll;
+    background-color: #ffffff;
+    padding-top: 1rem;
+}
+.New-Comment{
+    border-bottom: 1px solid ;
+}
+.New-Comment input:focus{
+    outline: none;
+    border-bottom: 2px solid blue;
+}
+.Commenter{
+    height: fit-content;
+    font-size: 1.25rem;
+    display: flex;
+    padding: 0.5rem;
+    border-bottom: 0.5px solid black;
+}
+.Commenter span{
+    flex: 1;
+}
+.Commenter span:nth-child(2){
+    text-align: end;
+}
+.Comment-Text{
+    font-size: 1.25rem;
+    height: fit-content;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+}
+.My-Comment{
+    margin-left: 15% !important;
+    background-color: #309CFF  !important;
+    border: 1px solid #309CFF !important;
+}    
+.Student-Grade{
+    font-size: 1.5rem;
+    display: flex;
+    height: 60%;
+}
+#Student-Grade-Entry{
+    font-size: 1.5rem;
+}
+.Student-Grade span:nth-child(1){
+    width: 75%;
+}
+.Student-Grade span:nth-child(3){
+    width: 20%;
+    text-align: center;
+}
+.Comment{
+    margin-left: 5%;
+    width: 80%;
+    margin-bottom: 2rem;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #d6d6d6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.Edit-Participants{position: relative;}
+#Student-Grade-Entry{
+    width: 4rem;
+    height: 85%;
+    border: none;
+    border-bottom: 1px solid gray;
+    display: block;
+    background-color: rgb(207, 207, 207);
+}
+#Student-Grade-Entry:focus{
+    outline: none;
+    border-bottom: 2px solid blue;
+    background-color: #fff;
+}
+#Conf-Delete-Task:hover{
+    background-color:rgb(231, 0, 0) ;
+}
+.Task-Buttons:nth-child(5):hover{
+    background-color:rgb(231, 0, 0) ;
+}

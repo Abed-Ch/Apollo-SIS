@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo Blogs</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+    <link rel="stylesheet" type="text/css" href="CSS/Blogs.css ">
+    <link rel="stylesheet" type="text/css" href="CSS/CAlert.css ">
+    <script src="https://kit.fontawesome.com/285ba1eb10.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="Loading-Screen" id="Loading-Screen">
+        <div class="fa-3x">
+            <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse"></i>
+        </div>
+        <div class="Loading-Message">Please Wait While We Construct Your Blog </div>
+    </div>
+    <nav>
+        <div class="Nav-Title-Container">
+            <span class="material-icons-round">article</span>
+            <p>Apollo Blogs</p>
+        </div>
+        <div class="Nav-Buttons-Container">
+            <span class="material-icons-round" id="Go-Home">home</span>
+            <span class="material-icons-round" id="Add-New-Blog">add</span>
+        </div>
+    </nav>
+    <main>
+        <div class="Main-Blogs-Container" id="Main-Blogs-Container"></div>
+        <div class="See-Blog" id="Read-Blog">
+            <div class="SBlog-Heading">
+                <div class="SBlog-Title" id="SBlog-Title"></div>
+                <div class="SBlog-Author-Date">
+                    <div class="SBlog-Author">Authors: <span id="SBlog-Author"></span></div>
+                    <div class="SBlog-Date" id="SBlog-Date"></div>
+                    <span class="material-icons-round" id="Exit-See-Blog"></span>
+                </div>
+                <div class="SBlog-MPic">
+                    <img src="Icons/Blog1-Pic.jpg" id="SBlog-MPic">
+                </div>
+            </div>
+            <div class="Blog-Body" id="Blog-Body"></div>
+            <div class="See-Blog-Rating" id="Blog-Rating">
+                <div class="Rating-Face"><span class="material-icons-round" id="Rating-Face"></span></div>
+                <div class="Rating-Stars" >
+                    <ul>
+                        <li><span class="material-icons-round" id="Star-One">star_border</span></li>
+                        <li><span class="material-icons-round" id="Star-Two">star_border</span></li>
+                        <li><span class="material-icons-round" id="Star-Three">star_border</span></li>
+                        <li><span class="material-icons-round" id="Star-Four">star_border</span></li>
+                        <li><span class="material-icons-round" id="Star-Five">star_border</span></li>
+                    </ul>
+                </div>
+                <div class="Rating-Conf-Res">
+                    <button type="submit" class="Submit-Rating">Confirm</button>
+                    <button type="reset" id="Reset">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="Popular-Blogs-Container" id="Popular-Blogs-Container"><p class="PBC-Title">Popular Blogs</p></div>
+        <div class="New-Blog-Input-Cont" id="New-Blog-Input-Cont">
+            <div class="New-Blog-Heading">
+                <div class="Inputs">
+                    <textarea id="New-Blog-Title" onkeyup="keyispressed(this)" placeholder="Title"></textarea>
+                    <input type="text" id="New-Blog-Author" onkeyup="keyispressed(this)" placeholder="Author">
+                    <input type="date" id="New-Blog-Date" onkeyup="keyispressed(this)" placeholder="Date">
+                </div>
+                <div class="Image">
+                    <input type="file" accept="image/*" id="New-Blog-Cover-Upload" onchange="loadFile(event)">
+                    <img id="New-Blog-Cover">
+                </div>
+            </div>
+            <div class="New-Blog-Body" id="New-Blog-Body">
+            </div>
+        </div>
+        <div class="New-Blog-Controll" id="New-Blog-Controll">
+            <div class="Controll-Options">
+                <span id="Insert" class="Controll-Options-Child" style="border-radius: 5px 0 0 5px;">Insert</span>
+                <span id="Review" class="Controll-Options-Child Reviewing" style="border-radius: 0  5px  5px 0;">Review</span>
+            </div>
+            <div class="Insert-Items" style="display: none;">
+                <button class="Insert-Button" id="Add-Par">Add Paragraph</button>
+                <div class="Empty-Button"></div>
+                <button class="Insert-Button" id="Add-Header">Add Header</button>
+                <div class="Empty-Button"></div>
+                <button class="Insert-Button" id="Add-FPic">Add Large Image</button>
+                <div class="Empty-Button"></div>
+                <button class="Insert-Button" id="Add-HPic">Add Medium Image</button>
+                <div class="Empty-Button"></div>
+                <button class="Insert-Button" id="Add-NList">Add Numbered List</button>
+                <div class="Empty-Button"></div>
+                <button class="Insert-Button" id="Add-UList">Add Unordered List</button>
+            </div>
+            <div class="Review-Items" >
+                <div class="Review-Summary" id="Review-Summary">
+                    <p>Your Blog Contains : </p>
+                    <p>0 Paragraphs</p>
+                    <p>0 Headers</p>
+                    <p>0 Large Images</p>
+                    <p>0 Medium Images</p>
+                    <p>0 Numbered Lists</p>
+                    <p>0 Unordered Lists</p>
+                </div>
+                <div class="Delete-Btns">
+                    <button class="NB-DB" id="Delete-Cover-Pic">Change Blog Cover</button>
+                    <button class="NB-DB" id="Delete-Latest-Div">Delete Latest Element</button>
+                </div>
+                <div class="Review-Buttons">
+                    <button class="Review-Controll" id="Publish-Blog" style="background-color: rgb(1, 114, 1);">Publish</button>
+                    <button class="Review-Controll" id="Conf-Publish-Blog" style="font-size: 1rem; display: none; background-color: rgb(1, 114, 1);">Confirm Publish</button>
+                    <button class="Review-Controll" id="Cancel-Blog"style=" background-color: rgb(190, 18, 18 );">Cancel</button>
+                    <button class="Review-Controll" id="Conf-Cancel-Blog"style="background-color: rgb(190, 18, 18); font-size: 16px; display: none;" >Confirm Cancel</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="CAlert-Container hide" id="CAlert-Container" style="z-index: 1;">
+        <div class="Alert-Icon"><span class="material-icons-round" id="Alert-Icon"></span></div>
+        <div class="Alert-Text" id="Alert-Text"></div>
+    </div>
+    <script>
+     function keyispressed(e){
+    var pat = /[*]/ ;
+    e.value = e.value.replace(pat ,"");
+    }
+    var loadFile = function(event) {
+	var image = document.getElementById('New-Blog-Cover');
+    let path = event.target.files[0].name;
+	image.src = URL.createObjectURL(event.target.files[0]);
+    event.target.style.display= "none";
+    image.style.display = "block";
+    console.log(path)
+    };
+    </script>
+    <script type="module" src="JavaScript/Blogs.js"></script>
+</body>
+</html>

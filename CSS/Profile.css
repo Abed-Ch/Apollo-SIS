@@ -1,0 +1,436 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body{
+    background-color: #fff;
+}
+main{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 750px;
+    height: 500px;
+}
+.Tabs{
+    width: 100%;
+    height: 100%;
+    background-color: #9ce5ce;
+    display: grid;
+    border-right: 1px solid gray;
+    grid-template-rows: 35% 12% 12% 31% 10%;
+}
+.Pic-Name{
+    display: grid;
+    grid-template-rows:70% 30%;
+    width: 100%;
+    height: 100%;
+}
+.Profile-Pic{
+    width: 53%;
+    height: 90%;
+    margin-top: 5%;
+    border-radius:50%;
+    margin-left: 23.5%;
+    position: relative;
+}
+.Profile-Pic .material-icons-outlined{
+    width: 100%;
+    height: 100%;
+    font-size:7.5rem;
+    text-align: center;
+    color: #571089;
+}
+.Profile-Name{
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    text-align: center;
+}
+.Account-Tab{
+    padding: 0.75rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.Password-Tab{
+    padding: 0.75rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.LogOut-Tab{
+    padding: 0.5rem 0.75rem;
+    font-size: 1.5rem;
+    background-color: rgb(201, 67, 67);
+    cursor: pointer;
+}
+.LogOut-Tab:hover{
+    background-color: rgba(201, 67, 67, 0.849);
+}
+.Account-Settings{
+    position: relative;
+    padding-left: 2.75rem;
+    color: #571089;
+}
+.LogOut{
+    position: relative;
+    color:#fff;
+    padding-left: 2.75rem;
+}
+.Account-Settings::before{
+    font-family: Material Icons;
+    content: "manage_accounts";
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    font-size: 2rem;
+    transform: translateY(-50%);
+    color: #571089;
+}
+.LogOut::before{
+    color: #ffffff;
+    font-family: Material Icons Round;
+    content: "logout";
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    font-size: 2rem;
+    transform: translateY(-50%);
+}
+.Password-Settings{
+    position: relative;
+    padding-left: 2.75rem;
+    color: #571089;
+}
+.Password-Settings::before{
+    color: #571089;
+    font-family: Material Icons;
+    content: "key";
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    font-size: 2rem;
+    transform: translateY(-50%);
+}
+.Main-Page{
+    width: calc(100%);
+    height: calc(100%);
+}
+.Account-Page{
+    display: grid;
+    grid-template-rows: 15% 85%;
+    height: 100%;
+    width: 100%;
+}
+.Account-Page .Title{
+    padding: 0.75rem;
+    font-size: 2.5rem;
+    border-bottom: 1px solid gray;
+}
+.Account-Page .Table{
+    padding: 1rem;
+    width: 94% ;
+    height: 94%;
+}
+
+.Account-Page tr{
+    width: 100%;
+    height: 5rem;
+}
+.Account-Page td{
+    height: 100%;
+}
+.Account-Page p{
+    font-size: 1.5rem;
+    color: #4e4e4e;
+}
+.Account-Page .User-Info{
+    width: 78%;
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    height: 2.25rem;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius:3px 3px 0 0;
+}
+.Account-Page .User-Info:focus{
+    border: none;
+    border-bottom: 2px solid blue ;
+    outline: none;
+}
+.Account-Setting-Btn{
+    width: 28%;
+    position: relative;
+    height: 55%;
+    margin-top: 1.25rem;
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    padding-right: 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.Edit:hover{
+    background-color: rgba(77, 77, 209, 0.884);
+}
+.Account-Setting-Btn::before{
+    color: #571089;
+    font-family: Material Icons;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    font-size: 1.5rem;
+    transform: translateY(-50%);
+}
+.Edit{
+    color: #fff;
+    background-color: rgb(77, 77, 209);
+    border: 2px solid rgb(77, 77, 209);
+}
+.Confirm{
+    color: #fff;
+    background-color: rgb(18, 145, 39);
+    border: 2px solid rgb(18, 145, 39);
+}
+.Confirm:hover{
+    background-color: rgba(18, 145, 39, 0.795);
+}
+.Account-Setting-Btn:nth-child(3){
+    color: #fff;
+    background-color: rgb(201, 67, 67);
+    border: 2px solid rgb(201, 67, 67);
+}
+.Account-Setting-Btn:nth-child(3):hover{
+    background-color: rgba(201, 67, 67, 0.795);
+
+}
+.Edit:before{
+    content: "edit";
+    color: #fff;
+}
+.Confirm:before{
+    content: "check";
+    color: #fff;
+}
+.Account-Setting-Btn:nth-child(3):before{
+    color: #fff;
+    content: "close" ;
+}
+.UnEditable{
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: rgb(228, 228, 228);
+}
+.Editable{
+    cursor: text;
+    pointer-events: all;
+    background-color: #ffffff;
+}
+.Active{
+    background-color: #afb1b1;
+    border-right:1px solid rgb(56, 56, 56) ;
+}
+.ReAuth-Page{
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 15% 20% 20%;
+}
+.ReAuth-Page .Title{
+    font-size:  2.75rem;
+    border-bottom: 1px solid gray;
+    height: 80%;
+}   
+.ReAuth-Page .ReAuth-Text{
+    width: 75%;
+    padding-left: 0.5rem;
+    font-size: 1.5rem;
+}
+.ReAuth-Page .Pass1{
+    padding-left: 0.5rem;
+    font-size: 1.1rem;
+
+}
+.Pass1 input{
+    width: 50%;
+    height: 35%;
+    margin-top: 1rem;
+    border: none;
+    border: 1px solid gray;
+    padding-left: 0.5rem;
+    font-size: 1.25rem;
+}
+.Pass1 input:focus{
+    border-bottom: 2px solid rgb(57, 57, 187);
+    outline: none;
+}
+.ReAuth-Page .Sign-In{
+    width: 50%;
+    padding-left: 1rem;
+}
+#ReAuth-Btn{
+    width: 95%;
+    height: 15%;
+    font-size: 1.25rem;
+    background-color: rgb(19, 116, 19);
+    border: 2px solid rgb(19, 116, 19);
+    border-radius: 5px;
+    cursor: pointer;
+}
+#ReAuth-Btn:hover{
+    background-color: rgba(19, 116, 19, 0.781);
+}
+.Password-Page{
+    width: 100%;
+    padding: 1rem;
+    height: 100%;
+    grid-template-rows: 15% 15% 15% 15%;
+    display: grid;
+}
+.Password-Page .Title{
+    font-size:  2.75rem;
+    border-bottom: 1px solid gray;
+    height:90%;
+}
+.Password-Old{
+    position: relative;
+}
+.Password-Old p{
+    font-size: 1.25rem;
+}
+#Pass-Old{
+    width: 50%;
+    height: 48%;
+    margin-top: 0.25rem;
+    padding-left: 0.5rem;
+    font-size: 1.25rem;
+}
+.Password-Confirm{
+    position: relative;
+}
+.Password-Confirm p{
+    font-size: 1.25rem;
+}
+#Pass-Conf{
+    width: 50%;
+    height: 48%;
+    padding-left: 0.5rem;
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+}
+#Pass-Old:focus , #Pass-Conf:focus{
+    outline: none;
+    border: none;
+    border-bottom: 2px solid blue;
+}
+#Pass-Old-Vis , #Pass-Conf-Vis{
+    font-size: 2rem;
+    display: initial;
+    position: absolute;
+    top: 38%;
+    right: 37%;
+    width: 3rem;
+    height: 2rem;
+    text-align: center;
+    background-color: #838383;
+    border: 1px solid gray;
+    border-radius: 10px ;
+    cursor: pointer;
+}
+#Pass-Old-Vis:hover,#Pass-Conf-Vis:hover{
+    background-color: #b6b6b6;
+
+}
+#Reset-Pass , #Conf-Reset-Pass , #Cancel-Pass, #Conf-Conf-Reset-Pass{
+    width: 32%;
+    height: 85%;
+    margin-right: 1rem;
+    font-size: 1rem;
+    position: relative;
+}
+#Conf-Conf-Reset-Pass{background-color: red;
+border: 1px solid red; 
+cursor: pointer;
+display: none;
+border-radius: 5px;
+}
+#Reset-Pass::after{
+    font-family: Material Icons;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    font-size: 1.5rem;
+    transform: translateY(-50%);
+}
+#Conf-Reset-Pass::after{
+    font-family: Material Icons;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    font-size: 1.5rem;
+    transform: translateY(-50%);
+}
+#Cancel-Pass::after{
+    font-family: Material Icons;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    font-size: 1.5rem;
+    transform: translateY(-50%);
+}
+/* #Rest-Pass::after{
+    content: "lock_reset";
+}
+
+#Conf-Reaet-Pass::after{
+    content: 'lock_reset';
+}
+#Cancel-Pass::after{
+    content: "close";
+} */
+.Pass-Btns{padding: 1rem 0;}
+.LogOut-Page{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 25% 35% 15%;
+}
+.LogOut-Page .Title{
+    padding: 1rem;
+    font-size: 3.5rem;
+    height: 60%;
+    border-bottom: 1px solid gray;
+}
+.LogOut-Page .Text{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.LogOut-Page .Controll-Btns{
+    padding: 1rem;
+}
+#Confirm-LogOut{
+    width: 30%;
+    height: 88%;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+    background-color: rgb(0, 146, 0);
+    border: 1px solid rgb(0, 146, 0);
+    border-radius: 5px;
+    cursor: pointer;
+}
+#Cancel-LogOut{
+    width: 30%;
+    height: 88%;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+    background-color: rgb(189, 0, 0);
+    border: 1px solid rgb(189,0,0);
+    border-radius: 5px;
+    cursor: pointer;
+}
+#Cancel-LogOut:hover{
+    background-color: rgba(189, 0, 0, 0.815);
+}
+#Confirm-LogOut:hover{
+    background-color: rgb(2, 170, 2);
+}

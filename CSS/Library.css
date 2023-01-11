@@ -1,0 +1,583 @@
+*{
+    margin: 0;
+    padding:0 ;
+    overflow-x: hidden;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 1366 900' width='1366' height='900' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Cdefs%3E%3Cfilter id='blur1' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='243' result='effect1_foregroundBlur'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='1366' height='900' fill='%23c0f7f5'/%3E%3Cg filter='url(%23blur1)'%3E%3Ccircle cx='140' cy='51' fill='%23f5d6ff' r='540'/%3E%3Ccircle cx='1242' cy='407' fill='%23c0f7f5' r='540'/%3E%3Ccircle cx='64' cy='660' fill='%23f5d6ff' r='540'/%3E%3Ccircle cx='335' cy='630' fill='%23f5d6ff' r='540'/%3E%3Ccircle cx='901' cy='291' fill='%23c0f7f5' r='540'/%3E%3Ccircle cx='918' cy='856' fill='%23f5d6ff' r='540'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    position: relative;
+}
+nav{
+    overflow: hidden;
+    width: -moz-available;
+    height: 5rem;
+    display: grid;
+    position: fixed;
+    grid-template: 100% / 50% 50%;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 1366 100' width='1366' height='100' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Cdefs%3E%3Cfilter id='blur1' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='56' result='effect1_foregroundBlur'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='1366' height='100' fill='%23c0f7f5'/%3E%3Cg filter='url(%23blur1)'%3E%3Ccircle cx='810' cy='15' fill='%23f5d6ff' r='125'/%3E%3Ccircle cx='269' cy='15' fill='%23c0f7f5' r='125'/%3E%3Ccircle cx='197' cy='43' fill='%23f5d6ff' r='125'/%3E%3Ccircle cx='77' cy='73' fill='%23f5d6ff' r='125'/%3E%3Ccircle cx='1306' cy='39' fill='%23c0f7f5' r='125'/%3E%3Ccircle cx='15' cy='4' fill='%23f5d6ff' r='125'/%3E%3C/g%3E%3C/svg%3E");
+    border-bottom: 1px solid rgb(196, 194, 194);
+    background-repeat: no-repeat;
+    transition: 0.4s;
+}
+.Library-Title{
+    padding: 1rem 0.75rem;
+    overflow: hidden;
+}
+.Library-Title .material-icons{
+    font-size: 3.513909224vw ;
+    margin-left: 0.5rem;
+    color: #571089;
+}
+.Library-Title .material-icons::after{
+    font-size:2.3426061496vw ;
+    content: 'APOLLO LIBRARY';
+    position: absolute;
+    top: 1.15rem;
+    left: 5.5rem;
+}
+.Library-Nav{
+    padding: 1rem 0.75rem;
+    overflow: hidden;
+
+}
+.Library-Nav .material-icons{
+    font-size: 3.513909224vw ;
+    margin-right: 0.5rem;
+    float: right;
+    margin-left: 0.2rem;
+    color: #571089;
+    cursor: pointer;
+}
+.Library-Nav .material-icons:hover{
+    background-color: #a3a3a370;
+}
+main{
+    overflow: hidden;
+    height: 140vh;
+    margin-top: 5rem;
+    border-top: 1px solid rgb(196, 194, 194) ;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.5% 6% 45.03% 6.5%  37.037%;
+    position: relative;
+   
+    transition: 0.4s;
+}
+.Category-Suggest{
+    padding: 0.71625rem 1rem;
+    overflow: hidden;
+    border-bottom: 1px solid rgb(184,184,184);
+}
+.Category-Suggest-Items{
+    font-size:1.1713030747vw;
+    width: 9vw;
+    height: 2.25rem;
+    margin-right: 1rem;
+    border-radius: 30px;
+    border: 0.5px solid rgb(189, 187, 187);
+    cursor: pointer;
+    position: relative;
+    padding-left: 0.75rem;
+}
+.Category-Suggest-Items::before{
+    font-family:'Material Icons';
+    margin-right: 3px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+.Category-Suggest-Items:nth-child(1):before{
+    content: "density_small";
+}
+.Category-Suggest-Items:nth-child(2):before{
+    content: "favorite";
+}
+.Category-Suggest-Items:nth-child(3):before{
+    content: "school";
+}
+.Category-Suggest-Items:nth-child(4):before{
+    content: "landscape";
+}
+.Category-Suggest-Items:nth-child(5):before{
+    content: "\e19b";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+.Category-Suggest-Items:nth-child(6):before{
+    content: "\f6e2";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+
+}
+.Category-Suggest-Items:nth-child(7):before{
+    content: "satellite_alt";
+}
+.Category-Recommend-Nav{
+    padding: 0rem 1rem;
+    border-bottom: 1px solid rgb(184, 184, 184);
+    overflow: hidden;
+}
+.Category-Nav-Items{
+    font-size: 1.4641288433vw;
+    height: 100%;
+    border: none;
+    background: none;
+    width: 12.884338214vw;
+    cursor: pointer;
+    margin-right: 1rem;
+    overflow: hidden;
+}
+.Active-Btn{
+    border-bottom: 3px solid rgb(25, 25, 218);
+    background-color: rgba(128, 128, 128, 0.171);
+}
+.Category-Recommend{
+    display: grid;
+    grid-template-columns: repeat(6 ,1fr);
+    gap: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+.Category-Book{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.123), 0 4px 8px 0 rgba(0, 0, 0, 0.185);
+    background-color: #ffffff85;
+    width: 95%;
+    height: 96%;
+    border-radius: 25px;
+    display: grid;
+    grid-template: 65% 35% /100% ; 
+    padding: 0.5rem;
+}
+.Category-Book *{border: none; overflow: hidden; }
+.Category-Book .Cover img{
+    margin-left:12.5% ;
+    width: 75%;
+    height: 100%;
+    border-radius: 15px 15px 0 0 ;
+    border: none;
+}
+.Category-Book .Details{
+    position: relative;
+}
+
+.Category-Book .Genre{
+    width: 8.78477306vw;
+    text-align: center;
+    font-size: 1.756954612vw;
+    position: relative;
+    left: 12%;
+    top: 5%;
+    border-radius: 25px;
+}
+.Category-Book .Title{
+    font-size: 1.756954612vw;
+    position: relative;
+    top: 10%;
+    left: 2%;
+    height: 3.5rem;
+}
+.Category-Book .Author{
+    font-size:1.1713030747vw;
+    position: relative;
+    top: 15%;
+    left: 2%;
+}
+.All-Books{
+    /* overflow-y: scroll;
+    border-radius: 20px;
+    position: relative; */
+    border-radius: 15px 15px 0 0;
+    height: fit-content;
+    max-height: 50vh;
+    margin-top: 22px;
+    margin: 15px;
+    padding-bottom: 20px;
+}
+.All-Books th{
+    height: 8vh;
+    position: sticky;
+    top: 0;
+    text-align: left;
+    padding: 0.25rem 0.75rem;
+    font-size:2.3426061496vw;
+    background-color: #fff;
+}
+.All-Books thead{border-radius: 25px 25px 0 0 ;
+    background-color: #fff;
+}
+table {
+    
+    min-width: max-content;
+    
+    border-collapse: separate;
+    border-spacing: 0px;   
+}
+.Category-Book:hover{
+    background-color: #9b979762;
+}
+.Get-My-ID:hover{
+    background-color: #9b979762;
+}
+
+.table th{
+    position: sticky; 
+    top: 0px;
+    font-size: 1.756954612vw;
+    border-bottom: 1.5px solid black;
+    background-color: rgb(255, 255, 255);
+} 
+
+
+.All-Books #Tbody{
+    overflow-y: scroll;
+}
+.table th, .table td {
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.table td {
+    text-align: left;
+    font-size:  1.4641288433vw;
+    border: 1px solid rgba(255, 255, 255, 0.534);
+    padding-left: 20px;
+    height: 15vh;
+}
+.table td:nth-child(1){
+    width: 13%;
+}
+.table th:nth-child(2)::after{
+    font-family:'Material Icons';
+    content: 'import_export';
+    margin-right: 3px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+}
+.table th:nth-child(2){
+    cursor: pointer;
+}
+.Book-Cover{
+    width: 75%;
+    height: 15vh;
+    margin-left: 12.5%;
+}
+.Book-Description-Tab{
+    position: fixed;
+    top: 05%;
+    right: 15%;
+    width: 70%;
+    height: 90%;
+    background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 1366 900' width='1366' height='900' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Cdefs%3E%3Cfilter id='blur1' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='243' result='effect1_foregroundBlur'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='1366' height='900' fill='%23c0f7f5'/%3E%3Cg filter='url(%23blur1)'%3E%3Ccircle cx='140' cy='51' fill='%23f5d6ff' r='540'/%3E%3Ccircle cx='1242' cy='407' fill='%23c0f7f5' r='540'/%3E%3Ccircle cx='64' cy='660' fill='%23f5d6ff' r='540'/%3E%3Ccircle cx='335' cy='630' fill='%23f5d6ff' r='540'/%3E%3Ccircle cx='901' cy='291' fill='%23c0f7f5' r='540'/%3E%3Ccircle cx='918' cy='856' fill='%23f5d6ff' r='540'/%3E%3C/g%3E%3C/svg%3E");
+
+    z-index: 1;
+    display: grid;
+    grid-template: 100% / 35% 65%;
+    transform: scale(0);
+    transition: transform 0.4s;
+}
+.Book-Description-Tab *{
+    overflow: hidden;
+}
+.Book-Description-Tab .Cover{
+    padding: 2%;
+}
+.Book-Description-Tab .Cover img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+.Book-Description-Tab .Details{
+    background-color: rgba(255, 255, 255, 0.89);
+
+    display:grid;
+    grid-template: 14% 11% 11% 11% 12% 24%  14% / 100%;
+    position: relative;
+}
+.Details .material-icons{
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    font-size: 3vw;
+    cursor: pointer;
+}
+.Details .material-icons:hover{
+    background-color: rgba(124, 124, 124, 0.295);
+}
+.Book-Description-Tab .Details .Title{
+    text-align: center;
+    padding: 1.5% 0;
+    font-size: 2.75vw;
+    font-weight: 500;
+    padding-top: 6%;
+}
+.Book-Description-Tab .Details .Author{
+    padding: 3% 1vw;
+    white-space: pre;
+    font-size: 1.75vw;
+}
+.Book-Description-Tab .Details .Genre-Language{
+    display: grid;
+    grid-template: 100% / 50% 50%;
+}
+.Genre-Language .Genre{
+    padding: 3% 1vw;
+    font-size: 1.75vw;
+    white-space: pre;
+}
+.Genre-Language .Language{
+    padding: 3% 1vw;
+    white-space: pre;
+    font-size: 1.75vw;
+}
+.Book-Description-Tab .Details .Release-Pages{
+    display: grid;
+    grid-template: 100% / 50% 50%;
+}
+.Release-Pages .Release-Date{
+    padding: 3% 1vw;
+    font-size: 1.75vw;
+    white-space: pre;
+}
+.Release-Pages .Pages{
+    padding: 3% 1vw;
+    font-size: 1.75vw;
+    white-space: pre;
+}
+.Book-Description-Tab .Details .Description{
+    padding: 10px 1vw;
+    font-size: 1.75vw;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.123), 0 4px 8px 0 rgba(0, 0, 0, 0.185);
+}
+#Details-Description{
+    border: 1px solid gray;
+    width: 100%;
+    height: 60%;
+    overflow-y: scroll; 
+}
+#Details-URL{
+    border: 1px solid gray;
+    overflow-y: scroll; 
+    width: 100%;
+    cursor: pointer;
+    height: 50%;
+}
+.Book-Description-Tab .Details .URL{
+    padding: 0 1vw;
+    font-size: 1.75vw;
+ 
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.123), 0 4px 8px 0 rgba(0, 0, 0, 0.185);
+ 
+}
+.Book-Description-Tab .Details .add{ 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.Details .add .Add-Wishlist-Btn{
+    width: 60%;
+    height: 70%;
+    font-size: 1.5vw;
+    position: relative;
+    padding-right: 50px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.Details .add .Add-Wishlist-Btn::after{
+    font-family:'Material Icons';
+    content: 'favorite';
+    margin-right: 3px;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    font-size: 2.5vw;
+    transform: translateY(-50%);
+}
+
+.Search-Tab{
+    background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 1366 900' width='1366' height='900' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Cdefs%3E%3Cfilter id='blur1' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='243' result='effect1_foregroundBlur'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='1366' height='900' fill='%23c0f7f5'/%3E%3Cg filter='url(%23blur1)'%3E%3Ccircle cx='140' cy='51' fill='%23f5d6ff' r='540'/%3E%3Ccircle cx='1242' cy='407' fill='%23c0f7f5' r='540'/%3E%3Ccircle cx='64' cy='660' fill='%23f5d6ff' r='540'/%3E%3Ccircle cx='335' cy='630' fill='%23f5d6ff' r='540'/%3E%3Ccircle cx='901' cy='291' fill='%23c0f7f5' r='540'/%3E%3Ccircle cx='918' cy='856' fill='%23f5d6ff' r='540'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: fixed;
+    top: 20%;
+    right: 25%;
+    width: 60%;
+    height: 60%;
+    z-index: 1;
+    display: grid;
+    grid-template: 25% 75% /100%;
+    transform: scale(0);
+    transition: transform 0.4s;
+}
+.Search-Bar-Container{
+    padding: 1rem;
+    padding-top: 2.5rem;
+    overflow: hidden;
+    padding-bottom: 0;
+    padding-left: 3rem;
+}
+.Search-Bar-Container .material-icons:hover{
+    background-color: #c0bdbd62;
+}
+.Search-Bar-Container .material-icons{
+
+    position: absolute;
+    text-align: center;
+    font-size: 2.5rem;
+    top: 42px;
+    right: 80px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+}
+#Cancel-Search{
+    position: absolute;
+    width: 2rem;
+    top: 5px;
+    left:8px;
+    font-size: 3vw;
+    text-align: left;
+}
+#Clear-Search{
+    position: absolute;
+    width: 3rem;
+    top: 44px;
+    right:16px;
+    font-size: 3vw;
+    text-align: left;
+}
+#Search-Bar{
+    width: 92%;
+    height: 80%;
+    border-radius: 100px;
+    padding-left: 1rem;
+    font-size: 1.25rem;
+    padding-right: 4rem;
+    overflow: hidden;
+}
+.Search-Table {
+    min-width: max-content;
+    border-collapse: separate;
+    border-spacing: 0px;    
+    background-color: rgba(255, 255, 255, 0.568);
+}
+
+
+
+.Search-Table th{
+    position: sticky; 
+    top: 0px;
+    font-size: 1.756954612vw;
+    border-bottom: 1.5px solid black;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    padding-left: 10px;
+} 
+
+.Search-Table th, .Search-Table td {
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.Search-Table td {
+    text-align: left;
+    font-size:  1.4641288433vw;
+    border: 1px solid rgb(255, 255, 255);
+    padding-left: 20px;
+    height: 5vh;
+}
+.Search-Table td:nth-child(1){
+    width: 50%;
+}
+
+
+.Wish-List-Tab{
+    position: fixed;
+    top: 0;
+    width: 20rem;
+    right: 0;
+    display: none;
+    background-color: #efffff;
+    height: 100vh;
+    border-radius: 100px 0 0 100px;
+    padding: 4rem 2rem;
+    transition: 0.4s;
+}
+.Table-Container-WishList{
+    position: relative;
+    width: 100%;
+    height: 85%;
+    overflow-y: scroll;
+}
+.WishList-Table{
+    position: absolute;
+    width: 100%;
+    
+    table-layout: fixed;
+    min-width: fit-content;
+}
+.WishList-Table caption{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+#WishList-Body td:nth-child(2){
+    font-family:'Material Icons';
+    width: 2rem;
+    font-size:2.5rem ;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#WishList-Body td:nth-child(1){
+    width: calc(100% - 2.5rem);
+    font-size: 1.5rem;
+    word-wrap:break-word;
+    border-bottom: 1px solid gray;
+}
+#WishList-Body td:nth-child(2){
+    width: 2.5rem;
+    border-bottom: 1px solid gray;
+}
+#WishList-Body td:nth-child(2):hover{
+    background-color: rgba(148, 148, 148, 0.356);
+}
+#Close-Wish-List{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.Wish-List-Tab{
+    animation: OpenWishListAnimation ease 0.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+}
+@keyframes OpenWishListAnimation {
+
+    0%{ 
+        
+        width: 0.05rem;
+    }
+    50% {
+        width: 10rem;
+    }
+    100% {
+        display: grid;
+        width: 20rem;
+    }
+}
+@media only screen and (max-width:1250px ){
+    .Category-Recommend{
+    grid-template-columns: repeat(5 ,1fr); 
+    }
+}

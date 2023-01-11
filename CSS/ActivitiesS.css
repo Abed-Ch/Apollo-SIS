@@ -1,0 +1,361 @@
+*{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.Editable-Field{
+    pointer-events: all !important;
+    background-color: #fff !important;
+}
+.Uneditable-Field{
+    pointer-events: none !important;
+}
+#main{
+    width: auto;
+    height: 100vh;
+    display: grid;
+    grid-template : 100% /30% 70% ;
+    transition: margin 0.3s;
+}
+.Title-Course{
+    display: grid;
+    grid-template: 100% / 50% 50%;
+}
+.Available-Tasks-Container{
+    padding: 1.5rem;
+    border-right: 1px solid gray;
+    display: grid;
+    grid-template-rows: 99%;
+    grid-template-columns: 100%;
+    position: relative;
+}
+.Existing-Activities-Container{
+    overflow-y: scroll;
+    display: grid;
+    grid-auto-rows: 8rem;
+    gap: 1.75rem;
+    grid-template-columns: 100%;
+}
+.Existing-Activity{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.123), 0 4px 8px 0 rgba(0, 0, 0, 0.185);
+    background-color: #efffff;
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+    padding: 0.75rem;
+    display: grid;
+    grid-template: 25% 25% 25% 25% / 100% ;
+}
+#EA-Title{
+    padding: 6px 0;
+    font-size: 1.25rem;
+}
+#EA-Class{
+    border-top: 1px solid gray;
+    padding: 8px 0;
+}
+#EA-Due{
+    padding: 8px 0;
+}
+#EA-Submissions-Cont{
+    padding: 8px 28px;
+    position: relative;
+}
+.Pending::before{
+    font-family:'Material Icons';
+    margin-right: 3px;
+    position: absolute;
+    top: 18px;
+    left: 0;
+    transform: translateY(-50%);
+    content: "pending";
+    font-size: 1.5rem;
+    color:#fe9705;
+}
+.All-Submitted::before{
+    font-family:'Material Icons';
+    margin-right: 3px;
+    position: absolute;
+    top: 18px;
+    left: 0;
+    color: #3ac430;
+    transform: translateY(-50%);
+    content: "check_circle";
+    font-size: 1.5rem;
+}
+.Missing::before{
+    font-family:'Material Icons';
+    margin-right: 3px;
+    position: absolute;
+    top: 18px;
+    left: 0;
+    color: #c43030;
+    transform: translateY(-50%);
+    content: "cancel";
+    font-size: 1.5rem;
+}
+.New-Activity{
+    position: absolute;
+    bottom: 1rem;
+    width: 93%;
+    height :3rem;
+
+}
+#New-Activity{
+    width: 92%;
+    margin-left: 1.5rem;
+    height: 3rem;
+    font-size: 1.25rem;
+    padding-right: 1.75rem;
+}
+#New-Activity::after{
+    font-family:'Material Icons';
+    margin-right: 3px;
+    position: absolute;
+    top: 50%;
+    right: 28%;
+    transform: translateY(-50%);
+    content: "add";
+    font-size: 1.5rem;
+}
+.New-Task-Container{overflow-y: scroll; background-color: #efffff;}
+.New-Task-Container table{
+    width: 80%;
+    margin: 0 10%;
+    margin-top: 1rem;
+    table-layout: fixed;
+        
+}
+.New-Task-Container td{
+    height: 100%;
+}
+#Course-Name{
+    width: 85%;
+    height: 65%;
+    pointer-events: none;
+    cursor: not-allowed;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    border: none;
+    background-color: rgba(231, 231, 231, 0.685);
+    border-bottom: 1px solid black;
+    box-shadow: 8px 6px 8px 0px #d4d4d4;
+    border-radius:5px 5px 0 0;
+}
+#Course-Name:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #3070c4;
+}
+#Task-Title{
+    width: 85%;
+    height: 65%;
+    pointer-events: none;
+    cursor: not-allowed;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    border: none;
+    background-color: rgba(231, 231, 231, 0.685);;
+    border-bottom: 1px solid black;
+    box-shadow: 8px 6px 8px 0px #d4d4d4;
+    border-radius:5px 5px 0 0;
+}
+#Task-Title:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #3070c4;
+}
+#Task-Descreption{
+    width: 92.5%;
+    height: 64%;
+    font-size: 1.5rem;
+    resize: none;
+    padding-left: 1rem;
+    border: none;
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color: rgba(231, 231, 231, 0.685);
+    border-bottom: 1px solid black;
+    box-shadow: 8px 6px 8px 0px #d4d4d4;
+    border-radius:5px 5px 0 0;
+}
+#Task-Descreption:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #3070c4;
+}
+
+#Activity-Start{
+    height: 30%;
+    width: 85%;
+        pointer-events: none;
+    cursor: not-allowed;
+    font-size: 1.25rem;
+    margin-top: 0.75rem;
+    padding-left: 1rem;
+    box-shadow: 8px 6px 8px 0px #d4d4d4;
+    background-color: rgba(231, 231, 231, 0.685);
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius:5px 5px 0 0;
+}
+#Activity-Start:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #3070c4;
+}
+#Activity-Due{
+    height: 30%;
+    background-color: rgba(231, 231, 231, 0.685);
+    width: 82%;
+    padding-left: 1rem;
+    font-size: 1.25rem;
+    margin-top: 0.75rem;
+    pointer-events: none;
+    cursor: not-allowed;
+    box-shadow: 8px 6px 8px 0px #d4d4d4;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius:5px 5px 0 0;
+}
+#Activity-End:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #3070c4;
+}
+
+
+#Task-Weight:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #3070c4;
+}
+.Task-Input{
+    width: 85%;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    box-shadow: 8px 6px 8px 0  #d4d4d4;
+    border-radius: 5px 5px 0 0 ;
+    margin-top: 0.75rem;
+    background-color:rgba(231, 231, 231, 0.685);
+    pointer-events: none;
+    cursor: not-allowed;
+}
+tr td:nth-child(2){
+    padding-left: 0.5rem;
+}
+#Teacher-Attach{
+    margin-top: 0.75rem;
+    height: 50%;
+    width:90%;
+    font-size: 1.2rem;
+}
+#My-Attach{
+    margin-top: 0.75rem;
+    height: 50%;
+}
+#Submit-Btn{
+    margin-top: 1rem;
+    height: 70%;
+    font-size: 1.2rem;
+    width: 90%;
+    cursor: pointer;
+    background-color: rgb(0, 160, 0);
+    border-radius: 5px;
+    border: 1px solid rgb(0, 160, 0);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.123), 0 4px 8px 0 rgba(0, 0, 0, 0.185);
+}
+#Submit-Btn:hover{
+    background-color: rgb(0, 185, 0);
+}
+.Comments-Container{
+    width: 90%;
+    height: 80%;
+    display: grid;
+    grid-template-rows: 15% 20% 65%;
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border :1px solid black;
+}
+.Comments-Title{
+    font-size: 2rem;
+}
+.Enter-Msg{
+    position: relative;
+}
+#Cancel-MSG{
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+#New-direct-MSG{
+    width: 84%;
+    height: 50%;
+    padding: 0 0.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-bottom: 2px solid gray;
+}
+#New-direct-MSG:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid blue;
+}
+#Send-MSG{
+    font-size: 2rem;
+    position: absolute;
+    top: 3px;
+    right: 9px;
+    cursor: pointer;
+    display: none;
+}
+#Send-MSG:hover , #Cancel-MSG:hover{
+    background-color: gainsboro;
+}
+.Comments-Container-Inner{
+    border-radius: 25px;
+    border: 1px solid;
+    padding: 1rem;
+    overflow-y: scroll;
+    height: 12rem;
+    background-color: #efffff;
+}
+.Comment{
+    width: 70%;
+    padding: 0.5rem;
+    border: 1px solid;
+    border-radius: 15px;
+    background-color: gainsboro;
+    margin-bottom: 1.5rem;
+}
+.Comment-Header{
+    display: flex;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.Comment-Header span{
+    flex: 1;
+}
+.Comment-Header span:nth-child(2){
+    flex: 1;
+    text-align: right;
+}
+.My-Comment{
+    margin-left: 25% !important;
+    background-color: #309CFF  !important;
+    border: 1px solid #309CFF !important;
+}
+.Comment-MSG{
+    height: auto;
+    border-top: 1px solid rgb(0, 0, 0);
+    padding-top: 0.5rem;
+}
+

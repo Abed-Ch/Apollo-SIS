@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Files</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+    <link rel="stylesheet" type="text/css" href="CSS/NavBar.css">
+    <link rel="stylesheet" type="text/css" href="CSS/Student-Profile.css">
+    <link rel="stylesheet" type="text/css" href="CSS/CAlert.css">
+</head>
+<body>
+    <div class="CAlert-Container hide" id="CAlert-Container" style="width: 25rem; grid-template: 100% / 20% 80%;">
+        <div class="Alert-Icon"><span class="material-icons-round" id="Alert-Icon"></span></div>
+        <div class="Alert-Text" id="Alert-Text"></div>
+    </div>
+    <nav class="navbar" id="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="Tmain.html" class="nav-link">
+                <span class="link-text logo-text">Apollo SIS</span>
+                <span class="material-icons" id="logo-icon">double_arrow</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="Announcements.html" class="nav-link">
+                    <span class="material-icons">announcement</span>
+                    <span class="link-text">Announcements</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Attendance.html" class="nav-link">
+                    <span class="material-icons">person_add</span>
+                    <span class="link-text">Attendance</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Blogs.html" class="nav-link">
+                <span class="material-icons">article</span>
+                <span class="link-text">Blogs</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Library.html" class="nav-link">
+                <span class="material-icons">auto_stories</span>
+                <span class="link-text">Libary</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Schedule.html" class="nav-link">
+                    <span class="material-icons">event_note</span>
+                    <span class="link-text">Schedule</span>
+                </a>
+            </li>
+            <li class="nav-item" style="background-color: rgba(182, 182, 182, 0.637);">
+                <a href="Student-Profile.html" class="nav-link">
+                    <span class="material-icons">folder_shared</span>
+                    <span class="link-text">Student Files</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Activities.html" class="nav-link">
+                    <span class="material-icons">assignment</span>
+                    <span class="link-text">Tasks</span>
+                </a>
+            </li>
+            <li class="nav-item" >
+                <a href="#" class="nav-link" id="profile">
+                    <span class="material-icons">account_circle</span>
+                <span class="link-text">Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        
+    </main>
+    <div class="Account-Page" id="Account-Page">
+        <span class="material-icons-round" id="Close-Account-Page">arrow_back_ios</span>
+        <div class="Title">
+            Student Information
+        </div>
+    <div class="Table">
+        <table style="width: 100%;" >
+            <tbody style="width: 100%;">
+                <tr>
+                    <td>
+                        <p>ID: </p>
+                        <input type="text" id="User-ID" class="User-Info">
+                    </td>
+                    <td>
+                        <p>Email: </p>
+                        <input type="text" id="User-Email" class="User-Info" style="font-size: 1rem;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>First Name: </p>
+                        <input type="text" id="First-Name" class="User-Info">
+                    </td>
+                    <td>
+                        <p>Last Name: </p>
+                        <input type="text" id="Last-Name"class="User-Info">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Birth Date: </p>
+                        <input type="text" id="Birth-Date"class="User-Info">
+                    </td>
+                    <td>
+                        <p>Primary Number: </p>
+                        <input type="text" id="Primary-Number"class="User-Info">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p>Address: </p>
+                        <input type="text" id="Address" class="User-Info" style="width: 89%;">
+                    </td>
+                </tr></tbody></table></div>
+    </div>
+    <script type="module" src="JavaScript/Student-Profile.js"></script>
+    <script type="module" src="JavaScript/Nav-Firebase.js"></script>
+</body>
+</html>

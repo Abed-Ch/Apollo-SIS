@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Home Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+    <link rel="stylesheet" type="text/css" href="CSS/NavBar-Main.css">
+    <link rel="stylesheet" type="text/css" href="CSS/Tmain.css">
+    <link rel="stylesheet" type="text/css" href="CSS/evo-calendar.css"/>
+    <link rel="stylesheet" type="text/css" href="CSS/CAlert.css">
+    <script type="text/javascript" src="JavaScript/Tmain.js"></script>
+</head>
+<body>
+    <div class="Notification-Bar" id="Notification-Bar">
+        <div class="Notifs" id="Notifs"></div>
+        <span id="Clear-All-Notifs">Clear All</span>
+        <span id="Close-Notifs">Close</span>
+    </div>
+    <div class="CAlert-Container hide" id="CAlert-Container" style="opacity: 1;">
+        <div class="Alert-Icon"><span class="material-icons-round" id="Alert-Icon"></span></div>
+        <div class="Alert-Text" id="Alert-Text"></div>
+    </div>
+    <nav class="navbar" id="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="Tmain.html" class="nav-link">
+                <span class="link-text logo-text">Apollo SIS</span>
+                <span class="material-icons" id="logo-icon">double_arrow</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="Library.html" class="nav-link">
+                <span class="material-icons">auto_stories</span>
+                <span class="link-text">Libary</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Blogs.html" class="nav-link">
+                <span class="material-icons">article</span>
+                <span class="link-text">Blogs</span>
+                </a>
+            </li>
+            <li class="nav-item" id="Open-Notifs">
+                <a href="#" class="nav-link">
+                <span class="material-icons">notifications</span>
+                <span class="link-text">Notifications</span>
+                </a>
+            </li>
+            <li class="nav-item" >
+                <a href="#" class="nav-link" id="profile">
+                <span class="material-icons">account_circle</span>
+                <span class="link-text">Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <main id="main">
+        <div class="Welcoming-Section">
+            <p id="title">Welcome !</p>
+            <p id="User-Name"></p>
+        </div>
+        <div class="Calander" id="Classes-Cont"></div>
+        <div class="Blog-Container" >  
+            <p id="title">Popular Blogs :</p>
+            <div class="Blogs" id="Blogs-Cont">
+                
+            </div>
+        </div>
+        <div class="Navigation-Buttons">
+            <p>Navigation Buttons:</p>
+            <div class="Nav-Container" style="display:none;" id="Nav-Cont">
+                <div class="Link-Box"><a href="Schedule.html" class="Nav-Link"><span class="material-icons">event_note</span><p class="Nav-Title">Schedule</p><p class="Discription">Click to see your schedule</p></a></div>
+                <div class="Link-Box"><a href="Activities.html" class="Nav-Link"><span class="material-icons">assignment</span><p class="Nav-Title">Tasks</p><p class="Discription">Click to assign Tasks  to students</p></a></div>
+                <div class="Link-Box"><a href="Student-Profile.html" class="Nav-Link"><span class="material-icons">folder_shared</span><p class="Nav-Title">Student File</p><p class="Discription">Click to see student files</p></a></div>
+                <div class="Link-Box"><a href="Attendance.html" class="Nav-Link"><span class="material-icons">person_add</span><p class="Nav-Title">Attendance</p><p class="Discription">Click to record student attendance</p></a></div>
+                <div class="Link-Box"><a href="Announcements.html" class="Nav-Link"><span class="material-icons">announcement</span><p class="Nav-Title">Announcement</p><p class="Discription">Click to post an announcment</p></a></div>
+            </div>
+        </div>
+    </main>
+    
+
+    <script type="module" src="JavaScript/Nav-Firebase.js"></script>
+    <script type="module" src="JavaScript/Tmain.js">
+</script>
+<script>
+function See_Blog(id){ 
+  localStorage.setItem('Blog', id );  
+  window.location.href = " Blogs.html";
+}
+</script>
+</body>
+</html>   

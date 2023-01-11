@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+    <link rel="stylesheet" type="text/css" href="CSS/NavBar.css">
+    <link rel="stylesheet" type="text/css" href="CSS/Attendance.css">
+    <link rel="stylesheet" type="text/css" href="CSS/CAlert.css">
+</head>
+<body>
+    <div class="CAlert-Container hide" id="CAlert-Container" style="width: 25rem; grid-template: 100% / 20% 80%;">
+        <div class="Alert-Icon"><span class="material-icons-round" id="Alert-Icon"></span></div>
+        <div class="Alert-Text" id="Alert-Text"></div>
+    </div>
+    <nav class="navbar" id="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="Tmain.html" class="nav-link">
+                <span class="link-text logo-text">Apollo SIS</span>
+                <span class="material-icons" id="logo-icon">double_arrow</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="Announcements.html" class="nav-link">
+                    <span class="material-icons">announcement</span>
+                    <span class="link-text" style="margin-left:0.5rem;">Announcements</span>
+                </a>
+            </li>
+            <li class="nav-item" style="background-color: rgb(196, 196, 196);">
+                <a href="Attendance.html" class="nav-link">
+                    <span class="material-icons">person_add</span>
+                    <span class="link-text">Attendance</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Blogs.html" class="nav-link">
+                <span class="material-icons">article</span>
+                <span class="link-text">Blogs</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Library.html" class="nav-link">
+                <span class="material-icons">auto_stories</span>
+                <span class="link-text">Libary</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Schedule.html" class="nav-link">
+                    <span class="material-icons">event_note</span>
+                    <span class="link-text">Schedule</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Student-Profile.html" class="nav-link">
+                    <span class="material-icons">folder_shared</span>
+                    <span class="link-text">Student Files</span>
+                </a>
+            </li>
+            <li class="nav-item" id="Activities-Page">
+                <a href="Activities.html" class="nav-link">
+                    <span class="material-icons">assignment</span>
+                    <span class="link-text">Tasks</span>
+                </a>
+            </li>
+            <li class="nav-item" >
+                <a href="#" class="nav-link" id="profile">
+                    <span class="material-icons">account_circle</span>
+                <span class="link-text">Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="Information-Bar">
+            <div class="Date"></div>
+            <div class="Class-Selection">
+                <div class="Select-List">
+                    <p>Please Choose A Class To Record Its Attendance: </p>
+                    <select id="Class-Select-List">
+                    </select>
+                </div>
+                <div class="Class-Information">
+                </div>
+            </div>
+            <div class="Controll-Btns" style="display: none;">
+                <div class="Empty"></div>
+                <button class="Cont-Btn" id="Confirm-Button">Confirm Attendance</button>
+                <div class="Empty"></div>
+                <button class="Cont-Btn" id="Cancel-Button">Cancel</button>
+                <div class="Empty"></div>
+            </div>
+        </div>
+        <div class="Students" style="display: none;">
+            <div class="Header">
+                <span>ID:</span>
+                <span>Name:</span>
+                <span>Email:</span>
+                <span>Attendance:</span>
+            </div>
+            <div class="Students-Container" id="Students-Container"></div>
+        </div>
+    </main>
+    <script type="module" src="JavaScript/Nav-Firebase.js"></script>
+    <script type="module" src="JavaScript/Attendance.js"></script>
+</body>
+</html>

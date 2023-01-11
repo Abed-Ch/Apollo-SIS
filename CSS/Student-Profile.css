@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: 0;
+}
+body{
+
+    overflow-y: scroll;
+    position: relative;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    height: fit-content;
+    padding: 2rem;
+    gap: 2.5rem;
+    min-height: 7rem;
+}
+.Profile-Container{
+    width: 100%;
+    height: 15rem;
+    border-radius: 15px;
+    display: grid;
+    grid-template-rows: 65% 35%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.Details-Container{
+    padding: 1rem;
+    position: relative;
+    background-color: #efffff;
+}
+.Details-Container p:nth-child(2){
+    font-size:1.25rem ;
+    text-align: center;
+    bottom: 8px;
+    width: 82%;
+    position: absolute;
+}
+.Details-Container p:nth-child(1){
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+.Button-Container{
+    padding: 1.5rem 1rem;
+    background-color:#9ce5ce ;
+}
+.View-Student-Btn{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.3rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #571089;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.05s;
+}
+.View-Student-Btn:hover{
+    background-color: #863bbb;
+}
+@media only screen and (max-width:1238px){
+    main{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media only screen and (max-width:1000px){
+    main{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media only screen and (max-width:800px){
+    main{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media only screen and (max-width:480px){
+    main{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+.Account-Page{
+    position: absolute;
+    border-radius: 15px;
+    left: 25%;
+    top: 10%;
+    display: none;
+    grid-template-rows:10% 13% 75%;
+    height: 80%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.123), 0 4px 8px 0 rgba(0, 0, 0, 0.185);
+    background-color: #efffff;
+    width: 50%;
+}
+.Account-Page .Title{
+    padding: 0.75rem;
+    font-size: 2.5rem;
+    border-bottom: 1px solid gray;
+}
+.Account-Page .Table{
+    padding: 1rem;
+    width: 94% ;
+    height: 94%;
+}
+
+.Account-Page tr{
+    width: 100%;
+    height: 5rem;
+}
+.Account-Page td{
+    height: 100%;
+}
+.Account-Page p{
+    font-size: 1.5rem;
+    color: #4e4e4e;
+}
+.Account-Page .User-Info{
+    width: 78%;
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    height: 2.25rem;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius:3px 3px 0 0;
+    background-color: #d4d4d4;
+    cursor: none;
+    pointer-events: none;
+}
+.Account-Page .material-icons-round{
+    font-size: 3rem;
+    margin: 0.25rem;
+    width: 3rem;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.Account-Page .material-icons-round:hover{
+    background-color: #cfcfcf;
+}

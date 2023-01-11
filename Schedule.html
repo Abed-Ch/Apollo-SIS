@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+    <link rel="stylesheet" type="text/css" href="CSS/NavBar.css">
+    <link rel="stylesheet" type="text/css" href="CSS/Schedule.css">
+    <link rel="stylesheet" type="text/css" href="CSS/CAlert.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="CSS/CalendarPicker.style.css" />
+    <script src="JavaScript/CalendarPicker.js"></script>
+    <title>Schedule</title>
+</head>
+<body>
+    <div class="CAlert-Container hide" id="CAlert-Container" style="width: 25rem; grid-template: 100% / 20% 80%;">
+        <div class="Alert-Icon"><span class="material-icons-round" id="Alert-Icon"></span></div>
+        <div class="Alert-Text" id="Alert-Text"></div>
+    </div>
+    <div class="Notification-Bar" id="Notification-Bar">
+        <div class="Notifs" id="Notifs"></div>
+        <span id="Clear-All-Notifs">Clear All</span>
+        <span id="Close-Notifs">Close</span>
+    </div>
+    <nav class="navbar" id="navbar" style="display: none;">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="Tmain.html" class="nav-link">
+                <span class="link-text logo-text">Apollo SIS</span>
+                <span class="material-icons" id="logo-icon">double_arrow</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="Announcements.html" class="nav-link">
+                    <span class="material-icons">announcement</span>
+                    <span class="link-text" style="font-size: 1.25rem;">Announcements</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Attendance.html" class="nav-link">
+                    <span class="material-icons">person_add</span>
+                    <span class="link-text">Attendance</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Blogs.html" class="nav-link">
+                <span class="material-icons">article</span>
+                <span class="link-text">Blogs</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Library.html" class="nav-link">
+                <span class="material-icons">auto_stories</span>
+                <span class="link-text">Libary</span>
+                </a>
+            </li>
+            <li class="nav-item" style="background-color: rgb(196, 196, 196);">
+                <a href="Schedule.html" class="nav-link">
+                    <span class="material-icons">event_note</span>
+                    <span class="link-text">Schedule</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Student-Profile.html" class="nav-link">
+                    <span class="material-icons">folder_shared</span>
+                    <span class="link-text">Student Files</span>
+                </a>
+            </li>
+            <li class="nav-item" id="Activities-Page">
+                <a href="Activities.html" class="nav-link">
+                    <span class="material-icons">assignment</span>
+                    <span class="link-text">Tasks</span>
+                </a>
+            </li>
+            <li class="nav-item" >
+                <a href="#" class="nav-link" id="profile">
+                    <span class="material-icons">account_circle</span>
+                <span class="link-text">Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="navbar" id="navbar2"  style="display: none;">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="Tmain.html" class="nav-link">
+                <span class="link-text logo-text">Apollo SIS</span>
+                <span class="material-icons" id="logo-icon">double_arrow</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="Announcements.html" class="nav-link">
+                    <span class="material-icons">announcement</span>
+                    <span class="link-text" style="font-size: 1.25rem;">Announcements</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Blogs.html" class="nav-link">
+                <span class="material-icons">article</span>
+                <span class="link-text">Blogs</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Library.html" class="nav-link">
+                    <span class="material-icons">auto_stories</span>
+                    <span class="link-text">Libary</span>
+                </a>
+            </li>
+            <li class="nav-item"   id="Open-Notifs" >
+                <a href="#" class="nav-link">
+                    <span class="material-icons">notifications</span>
+                    <span class="link-text">Notifications</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Petitions.html" class="nav-link">
+                    <span class="material-icons">history_edu</span>
+                    <span class="link-text">Petitions</span>
+                </a>
+            </li>
+            <li class="nav-item" style="background-color: rgb(196, 196, 196);">
+                <a href="Schedule.html" class="nav-link">
+                    <span class="material-icons">event_note</span>
+                    <span class="link-text">Schedule</span>
+                </a>
+            </li>
+            <li class="nav-item" id="Activities-Page">
+                <a href="ActivitiesS.html" class="nav-link">
+                    <span class="material-icons">assignment</span>
+                    <span class="link-text">Tasks</span>
+                </a>
+            </li>            
+            <li class="nav-item" >
+                <a href="#" class="nav-link" id="profile">
+                    <span class="material-icons">account_circle</span>
+                <span class="link-text">Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+     <main>
+         <div id="myCalendarWrapper"></div>
+         <div class="Daily-Schedule">
+             <div class="Schedule-Title">
+                 <p id="Schedule-Person"></p>
+                 <p id="Selected-Date"></p>
+             </div>
+             <div class="Classes" id="Classes-Cont"></div>
+         </div>
+     </main>
+    <script type="module" src="JavaScript/Nav-Firebase.js"></script>
+    <script type="module" src="JavaScript/Schedule.js"></script>
+</body>
+</html>

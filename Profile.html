@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+    <link rel="stylesheet" href="Css/Profile.css" type="text/css">
+    <link rel="stylesheet" href="Css/CAlert.css" type="text/css">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="CAlert-Container hide" id="CAlert-Container" style="width: 25rem; grid-template: 100% / 20% 80%;">
+        <div class="Alert-Icon"><span class="material-icons-round" id="Alert-Icon"></span></div>
+        <div class="Alert-Text" id="Alert-Text"></div>
+    </div>
+    <main>
+        <div class="Tabs"id="Tabs">
+            <div class="Pic-Name">
+                <div class="Profile-Pic"><span class="material-icons-outlined">account_circle</span></div>
+                <div class="Profile-Name" id="Profile-Name"></div>
+            </div>
+            <div class="Account-Tab" id="Account-Tab">
+                <span class="Account-Settings">Account</span>
+            </div>
+            <div class="Password-Tab" id="Password-Tab">
+                <span class="Password-Settings">Password</span>
+            </div>
+            <div class="NULL"></div>
+            <div class="LogOut-Tab" id="Logout-Tab">
+                <span class="LogOut">Log Out</span>
+            </div>
+        </div>
+        <div class="Main-Page">
+            <div class="Account-Page" id="Account-Page" style="display: none;">
+                <div class="Title">Account Settings</div>
+                <div class="Table">
+                    <table style="width: 100%;" >
+                        <tbody style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <p>ID: </p>
+                                    <input type="text" id="User-ID" class="User-Info">
+                                </td>
+                                <td>
+                                    <p>Email: </p>
+                                    <input type="text" id="User-Email" class="User-Info" style="font-size: 1rem;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>First Name: </p>
+                                    <input type="text" id="First-Name" class="User-Info">
+                                </td>
+                                <td>
+                                    <p>Last Name: </p>
+                                    <input type="text" id="Last-Name"class="User-Info">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Birth Date: </p>
+                                    <input type="text" id="Birth-Date"class="User-Info">
+                                </td>
+                                <td>
+                                    <p>Primary Number: </p>
+                                    <input type="text" id="Primary-Number"class="User-Info">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <p>Address: </p>
+                                    <input type="text" id="Address" class="User-Info" style="width: 89%;">
+                                </td>
+                            </tr>
+                            <tr style="height: 4rem;">
+                                <td colspan="2">
+                                    <button type="button" class="Account-Setting-Btn Edit" id="Edit">Update</button>
+                                    <button type="button" class="Account-Setting-Btn Confirm" id="Confirm">Confirm</button>
+                                    <button type="button" class="Account-Setting-Btn" id="Cancel">Cancel</button>
+                                </td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="ReAuth-Page"  id="ReAuth-Page" style="display: none; transition: 0.2s;">
+                <div class="Title">Confirm Password</div>
+                <div class="ReAuth-Text">For security measures , please re-enter your current password !</div>
+                <div class="Pass1">
+                    <p>Password: </p>
+                    <input type="password" id="ReAuth-Pass" placeholder="Password">
+                </div>
+                <div class="Sign-In">
+                    <button type="button" id="ReAuth-Btn">ReAuthenticate Password</button>
+                </div>
+            </div>
+            <div class="Password-Page" id="Password-Page" style="display: none;">
+                <div class="Title">Password Settings</div>
+                <div class="Password-Old">
+                    <p>Password: </p>
+                    <input type="password" id="Pass-Old" placeholder="New Password">
+                    <span class="material-icons" id="Pass-Old-Vis">visibility</span>
+                </div>
+                <div class="Password-Confirm">
+                    <p>Re-Enter Password: </p>
+                    <input type="password" id="Pass-Conf" placeholder="Re-Enter Password">
+                    <span class="material-icons" id="Pass-Conf-Vis">visibility</span>
+                </div>
+                <div class="Pass-Btns">
+                    <button type="button" id="Reset-Pass">Reset Password</button>
+                    <button type="button" id="Conf-Reset-Pass">Confirm Password</button>
+                    <button type="button" id="Conf-Conf-Reset-Pass">Confirm Password</button>
+                    <button type="button" id="Cancel-Pass">Cancel</button>
+                </div>
+            </div>
+            <div class="LogOut-Page" styl id="LogOut-Page" style="display: none;">
+                <div class="Title">Log Out</div>
+                <div class="Text">Please note that logging out will result in losing any unsaved progress on your previous page !</div>
+                <div class="Controll-Btns">
+                    <button id="Confirm-LogOut" type="button">Log Out</button>
+                    <button id="Cancel-LogOut" type="button">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="JavaScript/Profile.js"></script>
+</body>
+</html>

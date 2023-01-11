@@ -1,0 +1,71 @@
+.CAlert-Container{
+    position: absolute;
+    pointer-events: none;
+    overflow: hidden;
+    border-radius: 1px solid gray;
+    width: 20rem;
+    height: 5rem;
+    display: grid;
+    grid-template: 100% / 25% 75%;
+    top: 10px;
+    right: -8px;
+    opacity: 0;
+    border-radius: 15px 0 0 15px;
+    z-index: 1000;
+}
+.showAlert{
+    opacity: 1;
+}
+.Alert-Icon{
+    background-color: rgba(109, 121, 121, 0.253);
+    width: 5rem;
+    height: 100%;
+    overflow: hidden;
+}
+#Alert-Icon{
+    width: 60%;
+    height: 60%;
+    font-size: 3rem;
+    padding: 1rem;
+    text-shadow: none;
+}
+.Alert-Text{
+    padding:0.5rem ;
+    font-size: 1.1rem;
+    text-align: center;
+    overflow: hidden;
+}
+.show{
+    animation: show_slide 1s ease forwards; 
+}
+@keyframes show_slide{
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+.hide{
+    animation: hide_slide 1s ease forwards; 
+}
+@keyframes hide_slide{
+    0%{
+        transform: translateX(-10px);
+    }
+    40%{
+        transform: translateX(0%);
+    }
+    80%{
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}

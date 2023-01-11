@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petitions</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+    <link rel="stylesheet" type="text/css" href="CSS/NavBar.css">
+    <link rel="stylesheet" type="text/css" href="CSS/Petitions.css">
+    <link rel="stylesheet" type="text/css" href="CSS/CAlert.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar2"  style="display: none;">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="Tmain.html" class="nav-link">
+                <span class="link-text logo-text">Apollo SIS</span>
+                <span class="material-icons" id="logo-icon">double_arrow</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="Announcements.html" class="nav-link">
+                    <span class="material-icons">announcement</span>
+                    <span class="link-text" style="font-size: 1.25rem;">Announcements</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Blogs.html" class="nav-link">
+                <span class="material-icons">article</span>
+                <span class="link-text">Blogs</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Library.html" class="nav-link">
+                    <span class="material-icons">auto_stories</span>
+                    <span class="link-text">Libary</span>
+                </a>
+            </li>
+            <li class="nav-item"  id="Open-Notifs">
+                <a href="#" class="nav-link">
+                    <span class="material-icons">notifications</span>
+                    <span class="link-text">Notifications</span>
+                </a>
+            </li>
+            <li class="nav-item"  style="background-color: rgb(196, 196, 196);">
+                <a href="Petitions.html"  class="nav-link">
+                    <span class="material-icons">history_edu</span>
+                    <span class="link-text">Petitions</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Schedule.html" class="nav-link">
+                    <span class="material-icons">event_note</span>
+                    <span class="link-text">Schedule</span>
+                </a>
+            </li>
+            <li class="nav-item" id="Activities-Page" >
+                <a href="ActivitiesS.html" class="nav-link">
+                    <span class="material-icons">assignment</span>
+                    <span class="link-text">Tasks</span>
+                </a>
+            </li>            
+            <li class="nav-item" >
+                <a href="#" class="nav-link" id="profile">
+                    <span class="material-icons">account_circle</span>
+                <span class="link-text">Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="Notification-Bar" id="Notification-Bar">
+        <div class="Notifs" id="Notifs"></div>
+        <span id="Clear-All-Notifs">Clear All</span>
+        <span id="Close-Notifs">Close</span>
+    </div>
+    <div class="CAlert-Container hide" id="CAlert-Container" style="width: 25rem; grid-template: 100% / 20% 80%; opacity: 1;z-index: 100;">
+        <div class="Alert-Icon"><span class="material-icons-round" id="Alert-Icon"></span></div>
+        <div class="Alert-Text" id="Alert-Text"></div>
+    </div>
+    <main>
+        <div class="All-Petitions">
+            <div class="All-Cont">
+            </div>
+            <div class="New-Btn">
+                <button type="button" id="Open-NewP" >Write A New Petition</button>
+            </div>
+        </div>
+        <div class="View-Petitions">
+            <div class="Title">New Petition</div>
+            <div class="Body">
+                <table>
+                    <tbody id="TBODY">
+                        <tr style="height: 4rem;">
+                            <td><input type="text" class="Input-Field" id="NP-Cause" placeholder="Cause 'e.g...illness'"></td>
+                            <td><select id="NP-Type">
+                                <option value="0">Select A Petition Type</option>
+                                <option value="Missed-Task">Missed Task / Exam</option>
+                                <option value="Abscence">Justify Abscence</option>
+                            </select></td>
+                        </tr>
+                        <tr style="height: 4rem;">
+                            <td><p style="font-size:1.4rem; margin: 0.5rem 0;">From: </p><input type="date" class="Input-Field" id="NP-Start"></td>
+                            <td><p style="font-size:1.4rem; margin: 0.5rem 0;">TO:</p><input type="date" class="Input-Field" id="NP-End"></td>
+                        </tr>
+                        <tr style="height: 4rem;">
+                            <td style="font-size: 1.4rem;">Attachements :</td>
+                            <td><input type="file"  id="NP-Attach"></td>
+                        </tr>
+                        <tr  style="height: 6rem;">
+                            <td colspan="2">
+                                <textarea id="Petition-Details" placeholder="Petition Details:..."></textarea>
+                            </td>
+                        </tr>
+                        <tr style="height: 4rem;">
+                            <td><button id="Submit-Petition" class="Pet-Btn">Submit</button></td>
+                            <td><button id="Reset-Petition" class="Pet-Btn">Reset</button></td>
+                        </tr>
+                        <tr style="height: 4rem;" class="hide-me">
+                            <td><p style="font-size:1.4rem; margin: 0.5rem 0;">Petition Result:</p><input type="text" class="Input-Field" id="NP-Status"></td>
+                            <td><p style="font-size:1.4rem; margin: 0.5rem 0;">Petition Result Date:</p><input type="date" class="Input-Field" id="NP-Response-Date"></td>
+                        </tr>
+                        <tr style="height: 6rem;" class="hide-me">
+                            <td colspan="2"><p style="font-size:1.4rem; margin: 0.5rem 0;">Petition Response:</p><textarea id="Petition-Justify"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="JavaScript/Nav-Firebase.js"></script>
+    <script type="module" src="JavaScript/Petitions.js"></script>
+</body>
+</html>

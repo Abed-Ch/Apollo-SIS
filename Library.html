@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+    <link rel="stylesheet" type="text/css" href="CSS/Library.css">
+    <link rel="stylesheet" type="text/css" href="CSS/CAlert.css">
+    <script src="https://kit.fontawesome.com/285ba1eb10.js" crossorigin="anonymous"></script>
+    <title>Library</title>
+</head>
+<body>
+    <div class="CAlert-Container hide" id="CAlert-Container" style="z-index: 10;">
+        <div class="Alert-Icon"><span class="material-icons-round" id="Alert-Icon"></span></div>
+        <div class="Alert-Text" id="Alert-Text"></div>
+    </div>
+    <nav id="Nav-Bar">
+        <div class="Library-Title">
+            <span class="material-icons">auto_stories</span>
+        </div>
+        <div class="Library-Nav">
+            <span class="material-icons" id="profile">person</span>
+            <span class="material-icons" id="Home-Btn">home</span>
+            <span class="material-icons" id="Wish-List-Icon">favorite</span>
+            <span class="material-icons" id="Search-Icon">search</span>
+        </div>
+    </nav>
+    <main id="main">
+        <div class="Empty"></div>
+        <div class="Category-Recommend-Nav">
+            <button type="button" value="Recommend" class="Category-Nav-Items" id="Recommended-Books">Recommended</button>
+        </div>
+        <div class="Category-Recommend" id="Category-Recommend">
+        </div>
+        <div class="Category-Suggest" id="Category-Suggest">
+            <button type="button" value="All" class="Category-Suggest-Items" style="background-color: #ffffff;">All</button>
+            <button type="button" value="Romance" class="Category-Suggest-Items" style="background-color: #ffafcc;">Romance</button>
+            <button type="button" value="Education" class="Category-Suggest-Items" style="background-color: #bde0fe;">Education</button>
+            <button type="button" value="Adventure" class="Category-Suggest-Items" style="background-color: #2a9d8f;">Adventure</button>
+            <button type="button" value="Action" class="Category-Suggest-Items" style="background-color: #c2494d;">Action</button>
+            <button type="button" value="Thriller" class="Category-Suggest-Items" style="background-color: #f8961e;">Thriller</button>
+            <button type="button" value="Fiction" class="Category-Suggest-Items" style="background-color: #c77dff;">Fiction</button>
+        </div>
+        <div class="All-Books" >
+            <table class="table" style="width: 100%;     background-color: rgba(255, 255, 255, 0.5);">
+                <thead style="border-radius: 25px 25px 0 0;">
+                    <tr style="border-radius: 25px 25px 0 0;">
+                    <th>Cover</th>
+                    <th id="Sort" class="Ascending">Title</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                    <th>Release Date</th>
+                    <th>Pages</th></tr>
+                </thead>
+                <tbody id="Tbody">
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <div class="Search-Tab" id="Search-Tab"  >
+        <div class="Search-Bar-Container"><input type="search" id="Search-Bar" placeholder="Title, Author, Genre ..."><span class="material-icons" id="Confirm-Search">search</span><span class="material-icons" id="Cancel-Search">arrow_back_ios</span><span class="material-icons-round" id="Clear-Search">delete_forever</span></div>
+        <div class="Result-Container">
+            <table style="width: 100%; overflow:hidden; background-color: #fde6f6;" class="Search-Table">
+                <thead>
+                    <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Genre</th></tr>
+                </thead>
+                <tbody id="Search-Table-Body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="Book-Description-Tab" id="Book-Description-Tab">
+        <div class="Cover"><img id="Book-Desciption-Cover"></div>
+        <div class="Details">
+            <div class="Title" id="Details-Title"></div>
+            <div class="Author">BY:  <span id="Details-Author"></span></div>
+            <div class="Genre-Language">
+                <div class="Genre">Genre:  <span id="Details-Genre"></span></div>
+                <div class="Language">Language:  <span id="Details-Language"></span></div>  
+            </div>
+            <div class="Release-Pages">
+                <div class="Release-Date">Published:  <span id="Details-Release"></span></div>
+                <div class="Pages"><span id="Details-Pages"></span>  Pages</div></div>
+                <div class="URL"><caption>URL:</caption><div id="Details-URL"></div></div>
+                <div class="Description"><caption>Description:</caption><div id="Details-Description"></div></div>
+                <div class="add"><button type="submit" id="Add-Wishlist" class="Add-Wishlist-Btn">Add To WishList</button> </div>
+                <span class="material-icons" id="Back-Btn">arrow_back_ios</span>
+            </div>
+    </div>  
+    <div class="Wish-List-Tab" id="Wish-List-Tab">
+        <span class="material-icons" id="Close-Wish-List">arrow_forward_ios</span>
+        <div class="Table-Container-WishList">
+        <table class="WishList-Table">
+            <caption>My WishList</caption>
+            <tbody id="WishList-Body">
+
+            </tbody>
+        </table></div>
+    </div>
+<script type="module" src="JavaScript/Library.js"></script>
+
+</body>
+</html>

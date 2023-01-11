@@ -1,0 +1,198 @@
+<!DOCTYPE html><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+    <link rel="stylesheet" type="text/css" href="CSS/NavBar.css">
+    <link rel="stylesheet" type="text/css" href="CSS/Activities.css">
+    <link rel="stylesheet" type="text/css" href="CSS/CAlert.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    
+</head>
+<body>
+    <div class="CAlert-Container hide" id="CAlert-Container" style="width: 25rem; grid-template: 100% / 20% 80%; opacity: 1;z-index: 100;">
+        <div class="Alert-Icon"><span class="material-icons-round" id="Alert-Icon"></span></div>
+        <div class="Alert-Text" id="Alert-Text"></div>
+    </div>
+
+    <nav class="navbar" id="navbar"  style="display: none;">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="Tmain.html" class="nav-link">
+                <span class="link-text logo-text">Apollo SIS</span>
+                <span class="material-icons" id="logo-icon">double_arrow</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="Announcements.html" class="nav-link">
+                    <span class="material-icons">announcement</span>
+                    <span class="link-text" style="margin-left:0.5rem;">Announcements</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Attendance.html" class="nav-link">
+                    <span class="material-icons">person_add</span>
+                    <span class="link-text">Attendance</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Blogs.html" class="nav-link">
+                <span class="material-icons">article</span>
+                <span class="link-text">Blogs</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="Library.html" class="nav-link">
+                <span class="material-icons">auto_stories</span>
+                <span class="link-text">Libary</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Schedule.html" class="nav-link">
+                    <span class="material-icons">event_note</span>
+                    <span class="link-text">Schedule</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Student-Profile.html" class="nav-link">
+                    <span class="material-icons">folder_shared</span>
+                    <span class="link-text">Student Files</span>
+                </a>
+            </li>
+            <li class="nav-item" id="Activities-Page">
+                <a href="Activities.html" class="nav-link">
+                    <span class="material-icons">assignment</span>
+                    <span class="link-text">Tasks</span>
+                </a>
+            </li>
+            <li class="nav-item" >
+                <a href="#" class="nav-link" id="profile">
+                    <span class="material-icons">account_circle</span>
+                <span class="link-text">Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <main id="main">
+        <div class="Available-Tasks-Container">
+            <div class="Existing-Activities-Container" id="Existing-Activities-Container">
+
+            </div>
+            <div class="New-Activity"><button type="button" id="New-Activity">New Task</button></div>
+        </div>
+        <div class="New-Task-Container" id="New-Task-Container">
+            <table id="View-Table">
+                <caption style="margin-right: 1.75rem ; font-size: 2.5rem;">New Task</caption>
+                <tbody >
+                    <tr style="height: 4rem;">
+                        <td><input type="text" id="Course-Name" placeholder="Course: "></td>
+                        <td><input type="text" id="Task-Title" placeholder="Task-Title: "></td>
+                    </tr>
+                    <tr>
+                        <td style="height: 8rem;" colspan="2">
+                            <textarea id="Task-Descreption" placeholder="Task Descreption"></textarea>
+                        </td>
+                    </tr>
+                    <tr style="height: 4rem;">
+                        <td>
+                            <select id="Participants-Class">
+                                <option value="0" selected="selected">Select a Class</option>
+                            </select>
+                        </td>
+                        <td class="View-Participants">
+                            <span id="NumberParticipants"></span>
+                            <button id="See-Outer"><span class="material-icons-round" id="See-Participants">visibility</span></button>
+                        </td>
+                    </tr>
+                    <tr style="height: 4rem;">
+                        <td>
+                            <Select id="Submission-Type">
+                                <option value="0" selected="selected">Submission Type</option>
+                                <option id="In-Class" value="In-Class">In-Class</option>
+                                <option value="Online">Online</option>
+                            </Select>
+                        </td>
+                        <td>
+                            <div class="Attach-Container" >
+                            <span class="material-icons-round" style="font-size: 2.5rem; margin-top: 2px;" >attach_file</span> 
+                            <span style="display: inline-block; font-size: 1.5rem; margin-bottom: 0.5rem;" id="Attach_Outer">Attach Files</span>
+                            <input type="file" id="Attach-File">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="height: 8rem;">
+                        <td>
+                            <p style="font-size: 1.5rem;">Start :</p>
+                            <input type="datetime-local" id="Activity-Start">
+                        </td>
+                        <td >
+                            <p style="font-size: 1.5rem; margin-left: 1rem;" >Due :</p>
+                            <input type="datetime-local" id="Activity-Due">
+                        </td>
+                    </tr>
+                    <tr style="height: 4rem;">
+                        <td>
+                            <labe style="font-size: 1.5rem;">Weight: </labe><input type="text" id="Task-Weight">
+                        </td>
+                    </tr>
+                    <tr style="height: 4rem;">
+                        <td>
+                            <button type="button" class="Task-Buttons Edit" id="Edit-Task">Edit</button>
+                            <button type="button" class="Task-Buttons Submit" id="Submit-Task">Submit</button>
+                        </td>
+                        <td>
+                            <button type="button" class="Task-Buttons Delete" id="Delete-Task">Delete</button>
+                            <button type="button" class="Task-Buttons Delete" id="Conf-Delete-Task" style="display: none; background-color: rgb(165, 0, 0);">Confirm Delete</button>
+                            <button type="button" class="Task-Buttons Reset" id="Reset-Task">Reset</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <div class="View-Participants-Tab" style="display: none;">
+        <div class="Close-Button" id="Close-Tab-Btn">
+            <span class="material-icons-round" id="View-Participants-BackBtn">arrow_back_ios</span>
+        </div>
+        <div class="View-Participants-Inner" id="View-Participant-Inner" >
+        </div>
+        <div class="Edit-View-Participant" id="Edit-View-Participant" style="display: none;"> 
+            <div class="Student-Details">
+            </div>
+            <div class="Student-Status">
+            </div>
+            <div class="Student-Grade">
+                <span>Grade:   </span><span><input type="number" id="Student-Grade-Entry" ></span><span> / 100</span>
+            </div>
+            <div class="Student-Attachments">
+                <span>Attachments: </span><button id="Student-Attach-Download">Download Attachment</button>
+            </div>
+            <div class="Comments-Cont-Outer">
+                <div class="Comments-Title" style="font-size: 2rem; padding: 0.5rem;">
+                    Direct Messages
+                </div>
+                <div class="New-Comment" style="padding: 0.5rem;">
+                    <input type="text" id="New-Comment" placeholder="Leave A New Message">
+                </div>
+                <div class="Comments-Cont" id="Comments-Container">
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script type="module" src="JavaScript/Nav-Firebase.js"></script>
+    <script type="module" src="JavaScript/Activities.js"></script>
+</body>
+</html>
+<!-- <textarea id="Text-Area" onkeyup="keyispressed(this);" ></textarea>
+
+<input type="text" onkeyup="keyispressed(this);">
+<script>
+    function keyispressed(e){
+        var pat = /[*]/ ;
+        e.value = e.value.replace(pat ,"");
+    }
+</script> -->
